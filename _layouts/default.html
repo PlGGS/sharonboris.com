@@ -15,17 +15,50 @@
         {% endfor %}
     </head>
     <body>
-        <header>
-            <h1>Sharon Boris</h1>
-            <nav role='navigation'>
-                <ul>
-                    <li><a class="link-1 entypo-home active" href="#home"></a></li>
-                    <li><a class="link-2 entypo-picture" href="#clients"></a></li>
-                    <li><a class="link-3 entypo-user" href="#about"></a></li>
-                    <li><a class="link-4 entypo-mail" href="#contact-us"></a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <script>
+            $(document).ready(function() {
+  
+                // On click, remove class on active element, add it to the new one
+  
+                $('header nav a').click(function(e) {
+    
+                    $('header nav a.active').removeClass('active');
+                    $(this).addClass('active');
+    
+                    // Scroll to anchor
+    
+                    $('html,body').animate({scrollTop: $($(this).attr('href')).offset().top - 70},'slow');
+    
+                    e.preventDefault();
+                    return false;
+    
+                });
+  
+                // On scroll, remove class on active element and add it to the new one
+  
+                $(document).scroll(function() {
+     
+                    var position = Math.floor($(this).scrollTop() / 800) + 1;
+    
+                    $('header nav a.active').removeClass('active');
+                    $('header nav a.link-' + position).addClass('active');
+    
+                });
+  
+            });
+        </script>
+        
+        <h1>Sharon Boris</h1>
+        <nav role='navigation'>
+            <ul>
+                <li><a class="link-1 entypo-home active" href="#home"></a></li>
+                <li><a class="link-2 entypo-picture" href="#clients"></a></li>
+                <li><a class="link-3 entypo-user" href="#about"></a></li>
+                <li><a class="link-4 entypo-mail" href="#contact-us"></a></li>
+            </ul>
+        </nav>
+    </header>
 
         <div class="content">
             {{ content }}
