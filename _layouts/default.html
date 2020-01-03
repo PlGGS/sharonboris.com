@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>{{ page.title}} - Blake Boris</title>
-        <link rel="favicon" type="image/x-icon" href="/assets/BlakeSurprisedCircleBday.png" />
+        <title>{{page.title}} - Sharon Boris</title>
+        <link rel="favicon" type="image/x-icon" href="/assets/favicon.png" />
         <!--<link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">-->
         {% for item in page.css %}
         <link rel="stylesheet" type="text/css" href="/css/{{ item }}.css?{{site.time | date: '%s%N'}}">
@@ -15,30 +15,16 @@
         {% endfor %}
     </head>
     <body>
-        <header class="bar">
-            <div class="headerBar wrap clearfix">
-                <div class="bar_logo">
-                    <h2>{{ page.title }}</h2>
-                    <a href="/">
-                        <img src="/assets/BlakeSurprised.png" alt="blake" height="75" width="75" />
-                    </a>
-                </div>
-                <nav class="bar_nav">
-                    <ul class="nav">
-                        <li class="nav_item">
-                                <img src="/assets/SiteCircle.png" alt="blake" height="20" width="20" />
-                                <a href="/about/">About</a>
-                                <img src="/assets/SiteSquare.png" alt="blake" height="20" width="20" />
-                                <a href="/apps/">Applications</a>
-                                <img src="/assets/SiteRhombus.png" alt="blake" height="20" width="20" />
-                                <a href="/games/">Games</a>
-                                <img src="/assets/SiteTriangle.png" alt="blake" height="20" width="20" />
-                                <a href="/mods/">Mods</a>
-                                <a href="https://github.com/PlGGS">GitHub</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+        <header>
+            <h1>Sharon Boris</h1>
+            <nav role='navigation'>
+                <ul>
+                    <li><a class="link-1 entypo-home active" href="#home"></a></li>
+                    <li><a class="link-2 entypo-picture" href="#clients"></a></li>
+                    <li><a class="link-3 entypo-user" href="#about"></a></li>
+                    <li><a class="link-4 entypo-mail" href="#contact-us"></a></li>
+                </ul>
+            </nav>
         </header>
 
         <div class="content">
@@ -46,22 +32,43 @@
         </div>
 
         <footer>
-            <div class="footerLinks">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="https://bblake.info/lanturtle-modules">Modules</a>
-                            <a>|</a>
-                            <a href="https://github.com/PlGGS?tab=overview&from=2017-12-01&to=2017-12-31">2017</a>
-                            <a>|</a>
-                            <a href="https://github.com/PlGGS?tab=overview&from=2018-01-01&to=2018-12-31">2018</a>
-                            <a>|</a>
-                            <a href="https://github.com/PlGGS?tab=overview&from=2019-04-01&to=2019-12-31">2019</a>
-                            <a>|</a>
-                            <a href="https://bblake.info/vxa-doc">EVNTScript</a>
-                        </li>
-                    </ul>
-                </nav>
+            <div class="icon">
+                <ul>
+                    <li><a href="#" target="black"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" target="black"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#" target="black"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" target="black"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#" target="black"><i class="fa fa-youtube-play"></i></a></li>
+                </ul>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li class="p1"><a href="#">Contact Us</a></li>
+   	  		
+
+                </ul>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">new</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Media</a></li>
+   	  		
+   	  		
+                </ul>
+            </div>
+            <div class="nav2">
+                <ul>
+                    <li><a href="#" title="To Top"><i class="fa fa-chevron-down"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-end">
+                <p>Designed by: <a href="https://blakeboris.com">blakeboris.com</a></p>
             </div>
         </footer>
     </body>
