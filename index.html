@@ -4,110 +4,39 @@ title: Home
 css: main
 ---
 
-<header class="banner">
-    <img src="/assets/blapInLeaves300x300.png" alt="blake" height="300" width="300">
-    <h1>Blake Boris</h1>
-    <p>
-        This site was written from scratch,<br/>
-        not in Scratch.
-    </p>
-</header>
-<header class="music">
-    <h2><span>Last listened to</span></h2>
-    <table>
-        <tr>
-            <td>
-                <ul>
-                    <li>
-                        <h3><span id="music-span"></span></h3>
-                    </li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>
-                        <div id="album-art-div">
-
-                        </div>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-    </table>
-</header>
-<header class="projects">
-    <h2>All Projects</h2>
-    <h3>Coming soon...</h3>
-    <!-- TODO all apps in alphabetical order
-    <table align="center">
-        <tr>
-            <td>
-                <a href="apps/baseApp.html">
-                    <img src="assets/BlakeOutsideCircle.png" alt="blap" height="250" width="250">
-                    <h3>Blake Voice Commands</h3>
-                </a>
-            </td>
-            <td>
-                <a href="apps/baseApp.html">
-                    <img src="assets/BlakeOutsideCircle.png" alt="blap" height="250" width="250">
-                    <h3>Blake Voice Commands</h3>
-                </a>
-            </td>
-            <td>
-                <a href="apps/baseApp.html">
-                    <img src="assets/BlakeOutsideCircle.png" alt="blap" height="250" width="250">
-                    <h3>Blake Voice Commands</h3>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="apps/baseApp.html">
-                    <img src="assets/BlakeOutsideCircle.png" alt="blap" height="250" width="250">
-                    <h3>Blake Voice Commands</h3>
-                </a>
-            </td>
-            <td>
-                <a href="apps/baseApp.html">
-                    <img src="assets/BlakeOutsideCircle.png" alt="blap" height="250" width="250">
-                    <h3>Blake Voice Commands</h3>
-                </a>
-            </td>
-            <td>
-                <a href="apps/baseApp.html">
-                    <img src="assets/BlakeOutsideCircle.png" alt="blap" height="250" width="250">
-                    <h3>Blake Voice Commands</h3>
-                </a>
-            </td>
-        </tr>
-    </table>-->
-</header>
-
-<script>
-    $(document).ready(function () {
-        $.get("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=plggs&api_key=b25b959554ed76058ac220b7b2e0a026&limit=1&format=json", function (data, status) {
-            $("#music-span").html(data["recenttracks"]["track"][0]["name"] + "<br/>By: " + data["recenttracks"]["track"][0]["artist"]["#text"]);
-        });
-        var img = new Image();
-        $.get("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=plggs&api_key=b25b959554ed76058ac220b7b2e0a026&limit=1&format=json",
-            function (data, status) {
-                var img = new Image();
-                img.setAttribute("id", "album-img");
-                img.setAttribute("alt", "album");
-                console.log("adding album art")
-                document.getElementById("album-art-div").appendChild(img);
-                img.setAttribute("src", data.recenttracks.track[0].image[2]['#text']);
-            }
-        );
-        setInterval(function () {
-            $.get("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=plggs&api_key=b25b959554ed76058ac220b7b2e0a026&limit=1&format=json", function (data, status) {
-                $("#music-span").html(data["recenttracks"]["track"][0]["name"] + "<br/>By: " + data["recenttracks"]["track"][0]["artist"]["#text"]);
-            });
-            $.get("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=plggs&api_key=b25b959554ed76058ac220b7b2e0a026&limit=1&format=json",
-                function (data, status) {
-                    document.getElementById("album-img").setAttribute("src", data.recenttracks.track[0].image[2]['#text']);
-                }
-            );
-        }, 1000);
-    });
-</script>
+<header>
+    <h1>Sharon Boris</h1>
+    <nav role='navigation'>
+      <ul>
+        <li><a class="link-1 entypo-home active" href="#home"></a></li>
+         <li><a class="link-2 entypo-picture" href="#clients"></a></li>
+        <li><a class="link-3 entypo-user" href="#about"></a></li>
+        <li><a class="link-4 entypo-mail" href="#contact-us"></a></li>
+      </ul>
+    </nav>  
+  </header>
+  
+  <section id="home">
+    <h2>Home</h2>
+    <div class="illustration"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis diam id nulla dictum rhoncus. Praesent interdum, diam sit amet pretium fermentum, libero lacus porttitor justo, vitae molestie velit justo et est. Sed ut urna aliquet leo ornare viverra eu a est. Vivamus dignissim nisl sed metus hendrerit scelerisque. Nam facilisis velit id velit congue vitae venenatis orci tempor. Nam vel est id orci feugiat rhoncus. Duis tempus lectus non urna aliquam mollis. In at lacinia eros. Nam sed lorem est.<br/><br/>
+  
+  Nullam condimentum felis eu quam molestie sit amet dignissim justo tempus. Mauris ultricies massa aliquam lorem viverra in tristique purus fermentum. Mauris dictum erat eu ipsum rhoncus laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id orci ante. <br/><br/>Fusce ut risus a ligula scelerisque fermentum porttitor a tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sodales lobortis neque, id convallis purus pharetra a. Nullam aliquam tristique urna vel molestie. Vestibulum eu nisl magna.</p>
+  </section>
+  <section id="clients">
+    <h2>Clients</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel est id orci feugiat rhoncus. Duis tempus lectus non urna aliquam mollis. In at lacinia eros. Nam sed lorem est. Vestibulum placerat lorem in massa facilisis et mattis lacus mollis. Morbi nec dui ac magna dignissim euismod.Nullam condimentum felis eu quam molestie sit amet dignissim justo tempus. Mauris ultricies massa aliquam lorem viverra in tristique purus fermentum. Mauris dictum erat eu ipsum rhoncus laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id orci ante. <br/><br/>Fusce ut risus a ligula scelerisque fermentum porttitor a tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sodales lobortis neque, id convallis purus pharetra a. Nullam aliquam tristique urna vel molestie. Vestibulum eu nisl magna. Suspendisse justo sem, dapibus eu dapibus vitae, mollis nec tellus. Duis volutpat ligula metus. <br/><br/>Vivamus placerat, purus et aliquet vehicula, leo odio tempor dui, quis interdum augue leo quis quam. Maecenas facilisis viverra risus, id interdum sem elementum nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+  </section>
+  <section id="about">
+    <h2>About</h2>
+    <div class="illustration"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel est id orci feugiat rhoncus. Duis tempus lectus non urna aliquam mollis. In at lacinia eros. Nam sed lorem est. Vestibulum placerat lorem in massa facilisis et mattis lacus mollis. Morbi nec dui ac magna dignissim euismod.<br/><br/>
+  
+  Nullam condimentum felis eu quam molestie sit amet dignissim justo tempus. Mauris ultricies massa aliquam lorem viverra in tristique purus fermentum. Mauris dictum erat eu ipsum rhoncus laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id orci ante. <br/><br/>Nullam aliquam tristique urna vel molestie. Vestibulum eu nisl magna. Suspendisse justo sem, dapibus eu dapibus vitae, mollis nec tellus. Duis volutpat ligula metus. <br/><br/>Vivamus placerat, purus et aliquet vehicula, leo odio tempor dui, quis interdum augue leo quis quam. Maecenas facilisis viverra risus, id interdum sem elementum nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vestibulum placerat lorem in massa facilisis et mattis lacus mollis. Morbi nec dui ac magna dignissim euismod.Nullam condimentum felis eu quam molestie sit amet dignissim justo tempus. Mauris ultricies massa aliquam lorem viverra in tristique purus fermentum. </p>
+  </section>
+  <section id="contact-us">
+    <h2>Contact Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis diam id nulla dictum rhoncus. Praesent interdum, diam sit amet pretium fermentum, libero lacus porttitor justo, vitae molestie velit justo et est. Sed ut urna aliquet leo ornare viverra eu a est. Vivamus dignissim nisl sed metus hendrerit scelerisque. Nam facilisis velit id velit congue vitae venenatis orci tempor. Nam vel est id orci feugiat rhoncus. Duis tempus lectus non urna aliquam mollis. In at lacinia eros. Nam sed lorem est. Vestibulum placerat lorem in massa facilisis et mattis lacus mollis. Morbi nec dui ac magna dignissim euismod.<br/><br/>
+  
+  Nullam condimentum felis eu quam molestie sit amet dignissim justo tempus. Mauris ultricies massa aliquam lorem viverra in tristique purus fermentum. Mauris dictum erat eu ipsum rhoncus laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id orci ante. <br/><br/>Fusce ut risus a ligula scelerisque fermentum porttitor a tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sodales lobortis neque, id convallis purus pharetra a. Nullam aliquam tristique urna vel molestie. Vestibulum eu nisl magna. Suspendisse justo sem, dapibus eu dapibus vitae, mollis nec tellus. Duis volutpat ligula metus. Vivamus placerat, purus et aliquet vehicula, leo odio tempor dui, quis interdum augue leo quis quam. Maecenas facilisis viverra risus, id interdum sem elementum nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+  </section>
