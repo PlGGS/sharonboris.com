@@ -4,6 +4,7 @@
 @import url(https://fonts.googleapis.com/css?family=Meddon);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300);
 @import url(https://weloveiconfonts.com/api/?family=entypo);
+@import url(https://weloveiconfonts.com/api/?family=fontawesome);
 
 /* entypo */
 [class*="entypo-"]:before {
@@ -75,7 +76,8 @@ header nav ul li a.link-1 { background-color: #00c0e4; }
 header nav ul li a.link-2 { background-color: #e6567a; }
 header nav ul li a.link-3 { background-color: #eac14d; }
 header nav ul li a.link-4 { background-color: #5bd999; }
-
+header nav ul li a.link-5 { background-color: #5bd999; }
+header nav ul li a.link-6 { background-color: #5bd999; }
 
 section {
   width: 100%;
@@ -87,7 +89,9 @@ section {
 
 section#home { background-color: #00c0e4; margin-top: 70px;}
 section#about { background-color: #eac14d; }
-section#clients { background-color: #e6567a; }
+section#services { background-color: #e6567a; }
+section#insurance-info { background-color: #5bd999; }
+section#forms { background-color: #5bd999; }
 section#contact-us { background-color: #5bd999; }
 
 section h2 {
