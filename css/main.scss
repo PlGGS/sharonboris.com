@@ -217,17 +217,7 @@ footer {
     color: #e67e22;
 }
 
-@media(max-width:691px ) {
-    .nav1 ul li a, .nav ul li a {
-        font-size: 16px;
-    }
-}
-
 @media(max-width:604px ) {
-    .nav1 ul li a, .nav ul li a {
-        font-size: 14px;
-    }
-
     .nav ul li {
         padding: 0px;
     }
@@ -241,10 +231,6 @@ footer {
 }
 
 @media(max-width:539px ) {
-    .nav1 ul li a, .nav ul li a {
-        font-size: 11px;
-    }
-
     .nav ul li {
         margin: 5px 20px;
     }
@@ -258,10 +244,6 @@ footer {
     .nav ul li, .nav1 ul li {
         display: block;
         padding: 5px;
-    }
-
-    .nav2 ul li {
-        display: none;
     }
 
     .icon ul li a i {
