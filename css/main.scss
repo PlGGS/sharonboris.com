@@ -95,9 +95,9 @@ section {
 section#home { background-color: #00c0e4; margin-top: 70px;}
 section#about { background-color: #eac14d; }
 section#services { background-color: #e6567a; }
-section#insurance-info { background-color: #5bd999; }
+section#financial { background-color: #5bd999; }
 section#forms { background-color: #5bd999; }
-section#contact-us { background-color: #5bd999; }
+section#contact { background-color: #5bd999; }
 
 section h2 {
   color: white;
@@ -115,11 +115,8 @@ section p {
 }
 
 footer {
-    width: 100%;
-    height: auto;
-    margin: auto;
     background: #272727;
-    padding-top: 20px;
+    padding-top: 1px;
 }
 
 .icon {
@@ -194,77 +191,6 @@ footer {
 
 .nav ul li a:hover {
     color: #e67e22;
-}
-
-.nav1 {
-    width: 100%;
-    height: auto;
-    margin: auto;
-    margin-top: 15px;
-}
-
-.nav1 ul {
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-}
-
-
-.nav1 ul li {
-    display: inline-block;
-    margin: 0px 20px;
-}
-
-.nav1 ul li a {
-    text-decoration: none;
-    outline: none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.nav1 ul li a:hover {
-    color: #e67e22;
-}
-
-.nav2 {
-    width: 100%;
-    height: auto;
-    margin: auto;
-}
-
-.nav2 ul {
-    text-align: center;
-}
-
-.nav2 ul li {
-    width: 50px;
-    height: 50px;
-    margin: 0px 10px;
-    border-radius: 100%;
-    background: #fff;
-}
-
-.nav2 ul li a {
-    text-decoration: none;
-    color: #272727;
-    font-size: 25px;
-    display: block;
-}
-
-.nav2 ul li a i {
-    line-height: 50px;
-}
-
-.nav2 ul li:hover {
-    background: #e67e22;
-}
-
-.nav2 ul li a:hover > i {
-    transform: scale(1.6) rotate(180deg);
 }
 
 .footer-end {
