@@ -72,12 +72,12 @@ header nav ul li a.active{
   border-bottom: none;
 }
 
-header nav ul li a.link-1 { background-color: #00c0e4; }
-header nav ul li a.link-2 { background-color: #e6567a; }
-header nav ul li a.link-3 { background-color: #eac14d; }
-header nav ul li a.link-4 { background-color: #5bd999; }
-header nav ul li a.link-5 { background-color: #5bd999; }
-header nav ul li a.link-6 { background-color: #5bd999; }
+header nav ul li a.link-1 { background-color: #C1FCE3; }
+header nav ul li a.link-2 { background-color: #AAFFDB; }
+header nav ul li a.link-3 { background-color: #7DFEC8; }
+header nav ul li a.link-4 { background-color: #6be0a4; }
+header nav ul li a.link-5 { background-color: #38C67E; }
+header nav ul li a.link-6 { background-color: #1BA760; }
 
 section {
     width: 100%;
@@ -92,12 +92,31 @@ section {
     }
 }
 
-section#home { background-color: #00c0e4; margin-top: 70px;}
-section#about { background-color: #e6567a; }
-section#services { background-color: #eac14d; }
-section#financial { background-color: #5bd999; }
-section#forms { background-color: #5bd999; }
-section#contact { background-color: #5bd999; }
+section#home {
+    background-color: #C1FCE3;
+    margin-top: 70px;
+    color: #000000;
+}
+section#about {
+    background-color: #AAFFDB;
+    color: #000000;
+}
+section#services {
+    background-color: #7DFEC8;
+    color: #000000;
+}
+section#financial {
+    background-color: #6be0a4;
+    color: #FFFFFF;
+}
+section#forms {
+    background-color: #38C67E;
+    color: #FFFFFF;
+}
+section#contact {
+    background-color: #1BA760;
+    color: #FFFFFF;
+}
 
 section h2 {
   color: white;
