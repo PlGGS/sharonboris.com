@@ -95,15 +95,44 @@ section {
 section#home {
     background-color: #C1FCE3;
     margin-top: 70px;
-    color: #000000;
+
+    div {
+        h2 {
+            color: #000000;
+        }
+
+        p {
+            color: #000000;
+        }
+    }
 }
 section#about {
     background-color: #AAFFDB;
     color: #000000;
+
+    div {
+        h2 {
+            color: #000000;
+        }
+
+        p {
+            color: #000000;
+        }
+    }
 }
 section#services {
     background-color: #7DFEC8;
     color: #000000;
+
+    div {
+        h2 {
+            color: #000000;
+        }
+
+        p {
+            color: #000000;
+        }
+    }
 }
 section#financial {
     background-color: #6be0a4;
