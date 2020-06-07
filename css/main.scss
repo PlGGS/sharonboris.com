@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: "Peaches";
-    src: url(../fonts/cream-peach.ttf) format("truetype");
+    src: url(../fonts/Cream-Peach.ttf) format("truetype");
 }
 
 :root {
@@ -112,7 +112,10 @@ section#home {
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 70px;
-    padding-top: 75px;
+    padding-top: 13.5%;
+    height: 0%;
+    padding-bottom: 13.5%;
+    margin: 0 auto;
 
     div {
         text-align: center;
