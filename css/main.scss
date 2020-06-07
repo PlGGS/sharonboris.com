@@ -10,6 +10,20 @@
   font-family: 'entypo', sans-serif;
 }
 
+@font-face {
+    font-family: "Peaches";
+    src: url(http://www.example.org/mycustomfont.ttf) format("truetype");
+}
+
+:root {
+    --home-color: #2865b4;
+    --about-color: #f1fffa;
+    --services-color: #ccfccb;
+    --financial-color: #96e6b3;
+    --forms-color: #568259;
+    --contact-color: #464e47;
+  }
+
 body, ul, li {
   margin: 0;
   padding: 0;
@@ -35,7 +49,7 @@ header h1 {
   float: left;
   margin: 5px 0px;
   color: white;
-  font-family: 'Meddon', cursive;
+  font-family: 'Peaches';
 }
 
 header nav ul {
@@ -72,12 +86,12 @@ header nav ul li a.active{
   border-bottom: none;
 }
 
-header nav ul li a.link-1 { background-color: #C1FCE3; }
-header nav ul li a.link-2 { background-color: #AAFFDB; }
-header nav ul li a.link-3 { background-color: #7DFEC8; }
-header nav ul li a.link-4 { background-color: #6be0a4; }
-header nav ul li a.link-5 { background-color: #38C67E; }
-header nav ul li a.link-6 { background-color: #1BA760; }
+header nav ul li a.link-1 { background-color: var(--home-color) }
+header nav ul li a.link-2 { background-color: var(--about-color); }
+header nav ul li a.link-3 { background-color: var(--services-color); }
+header nav ul li a.link-4 { background-color: var(--financial-color); }
+header nav ul li a.link-5 { background-color: var(--forms-color); }
+header nav ul li a.link-6 { background-color: var(--contact-color); }
 
 section {
     width: 100%;
@@ -93,12 +107,20 @@ section {
 }
 
 section#home {
-    background-color: #C1FCE3;
+    background-color: var(--home-color);
+    background-image: url('trees.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-top: 70px;
+    padding-top: 75px;
 
     div {
         h2 {
-            color: #000000;
+            text-align: center;
+            color: #fff;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: gray;
+            font-size: 3.5em;
         }
 
         p {
@@ -107,7 +129,7 @@ section#home {
     }
 }
 section#about {
-    background-color: #AAFFDB;
+    background-color: var(--about-color);
     color: #000000;
 
     div {
@@ -121,7 +143,7 @@ section#about {
     }
 }
 section#services {
-    background-color: #7DFEC8;
+    background-color: var(--services-color);
     color: #000000;
 
     div {
@@ -135,15 +157,15 @@ section#services {
     }
 }
 section#financial {
-    background-color: #6be0a4;
+    background-color: var(--financial-color);
     color: #FFFFFF;
 }
 section#forms {
-    background-color: #38C67E;
+    background-color: var(--forms-color);
     color: #FFFFFF;
 }
 section#contact {
-    background-color: #1BA760;
+    background-color: var(--contact-color);
     color: #FFFFFF;
 }
 
