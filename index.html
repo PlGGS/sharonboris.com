@@ -4,6 +4,9 @@ title: Sharon Boris, LCSW, LLC
 css: main
 ---
 
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
 <section id="home">
     <div>
         <img src='assets/sharon.png' width="300px" height="300px"/>
@@ -11,8 +14,9 @@ css: main
 </section>
 <section id="about">
     <div>
+        <h2>Welcome</h2>
         <p>
-            Welcome to Sharon Boris, LCSW, LLC! I am pleased to offer you a supportive and
+            Here at Sharon Boris, LCSW, LLC, I am pleased to offer you a supportive and
             collaborative environment.
             <br /><br />
             Choose from a wide variety of time tested methods, and we will
@@ -36,9 +40,8 @@ css: main
             approaches will play a large role, just to name a few.
             <br /><br />
             My work focuses on treating <b>depression</b>, <b>anxiety</b>, <b>women's issues</b>, and <b>grief</b> for adults and seniors.
-            I also help with life transitions, .
             <br /><br />
-            <b>I offer specialized services to family caregivers</b> including <b>consuting</b>, <b>counseling</b>, and <b>resources</b>.
+            <b>I also help with life transitions and offer specialized services to family caregivers</b> including <b>consuting</b>, <b>counseling</b>, and <b>resources</b>.
         </p>
     </div>
 </section>
@@ -64,6 +67,11 @@ css: main
 <section id="forms">
     <div>
         <h2>Resources</h2>
+        <script>
+            $.getJSON('./files/new-patient', data => {
+                console.log(data);
+            });
+        </script>
         <p>
             Coming soon...
         </p>
