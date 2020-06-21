@@ -74,15 +74,15 @@ css: main
             <script>
                 (document).ready(function () {
                     $.get("https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient", function (data) {
-                        let htmlString = `<table align="center"><tr>`;
+                        let htmlString = '<table align="center"><tr>';
                         for (let file of data) {
                             htmlString += `<td><a href="${file.path}">${file.name}</a></td>`;
                         }
                         htmlString += '</tr></table>';
 
                         $("#new-patient").html(htmlString);
-                    });
-                })
+                    })
+                });
             </script>
         </div>
         <div>
@@ -99,8 +99,8 @@ css: main
                         htmlString += '</tr></table>';
 
                         $("#telehealth").html(htmlString);
-                    });
-                })
+                    })
+                });
             </script>
         </div>
     </div>
