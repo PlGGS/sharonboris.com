@@ -165,6 +165,15 @@ section#financial {
 section#forms {
     background-color: var(--forms-color);
     color: #FFFFFF;
+
+    section h2 {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    span table tr td a {
+        font-family: 'Open Sans', sans-serif;
+    }
 }
 section#contact {
     background-color: var(--contact-color);
