@@ -73,8 +73,8 @@ css: main
             </span>
             <script>
                 (document).ready(function () {
-                    $.get("https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient", function (response) {
-                        let htmlString = `<table align="center"><tr><td>`;
+                    $.get("https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient", function (data) {
+                        let htmlString = `<table align="center"><tr>`;
                         for (let file of data) {
                             htmlString += `<td><a href="${file.path}">${file.name}</a></td>`;
                         }
@@ -83,17 +83,6 @@ css: main
                         $("#new-patient").html(htmlString);
                     });
                 }
-                
-                // (async () => {
-                //     const response = await fetch('https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient');
-                //     const data = await response.json();
-                //     let htmlString = `<table align="center"><tr><td>`;
-                //     for (let file of data) {
-                //         htmlString += `<td><a href="${file.path}">${file.name}</a></td>`;
-                //     }
-                //     htmlString += '</tr></table>';
-                //     document.getElementById('new-patient').innerHTML = htmlString;
-                // })()
             </script>
         </div>
         <div>
@@ -102,8 +91,8 @@ css: main
             </span>
             <script>
                 (document).ready(function () {
-                    $.get("https://api.github.com/repos/plggs/sharonboris.com/contents/files/telehealth", function (response) {
-                        let htmlString = `<table align="center"><tr><td>`;
+                    $.get("https://api.github.com/repos/plggs/sharonboris.com/contents/files/telehealth", function (data) {
+                        let htmlString = `<table align="center"><tr>`;
                         for (let file of data) {
                             htmlString += `<td><a href="${file.path}">${file.name}</a></td>`;
                         }
@@ -114,9 +103,6 @@ css: main
                 }
             </script>
         </div>
-        <p>
-            Coming soon...
-        </p>
     </div>
 </section>
 <section id="contact">
