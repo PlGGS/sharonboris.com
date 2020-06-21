@@ -70,8 +70,11 @@ css: main
         <div>
             <h3>New Patients</h3>
             <script>
-                $.ajax('https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient',   // request url
-                {
+                $.ajax({
+                    type: 'GET',
+                    crossDomain: true,
+                    dataType: 'jsonp',
+                    url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient',
                     success: function (data, status, xhr) {
                         let htmlString = '<ul>';
                         for (let file of data) {
@@ -81,7 +84,7 @@ css: main
 
                         $("#new-patient").html(htmlString);
                     }
-                });
+                })
             </script>
             <span id="new-patient">
             </span>
@@ -89,8 +92,11 @@ css: main
         <div>
             <h3>Telehealth</h3>
             <script>
-                $.ajax('https://api.github.com/repos/plggs/sharonboris.com/contents/files/telehealth',   // request url
-                {
+                $.ajax({
+                    type: 'GET',
+                    crossDomain: true,
+                    dataType: 'jsonp',
+                    url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient',
                     success: function (data, status, xhr) {
                         let htmlString = '<ul>';
                         for (let file of data) {
