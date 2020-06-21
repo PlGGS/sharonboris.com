@@ -73,11 +73,11 @@ css: main
                 $.ajax('https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient',   // request url
                 {
                     success: function (data, status, xhr) {
-                        let htmlString = '<table align="center"><tr>';
+                        let htmlString = '<ul>';
                         for (let file of data) {
-                            htmlString += `<td><a href="${file.path}">${file.name}</a></td>`;
+                            htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
                         }
-                        htmlString += '</tr></table>';
+                        htmlString += '</ul>';
 
                         $("#new-patient").html(htmlString);
                     }
@@ -92,11 +92,11 @@ css: main
                 $.ajax('https://api.github.com/repos/plggs/sharonboris.com/contents/files/telehealth',   // request url
                 {
                     success: function (data, status, xhr) {
-                        let htmlString = '<table align="center"><tr>';
+                        let htmlString = '<ul>';
                         for (let file of data) {
-                            htmlString += `<td><a href="${file.path}">${file.name}</a></td>`;
+                            htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
                         }
-                        htmlString += '</tr></table>';
+                        htmlString += '</ul>';
 
                         $("#telehealth").html(htmlString);
                     }
