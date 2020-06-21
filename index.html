@@ -69,11 +69,10 @@ css: main
         <h2>Resources</h2>
         <div>
             <h3>New Patients</h3>
-            <span id="new-patient">
-            </span>
             <script>
-                (document).ready(function () {
-                    $.get("https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient", function (data) {
+                $.ajax('https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient',   // request url
+                {
+                    success: function (data, status, xhr) {
                         let htmlString = '<table align="center"><tr>';
                         for (let file of data) {
                             htmlString += `<td><a href="${file.path}">${file.name}</a></td>`;
@@ -81,27 +80,30 @@ css: main
                         htmlString += '</tr></table>';
 
                         $("#new-patient").html(htmlString);
-                    })
+                    }
                 });
             </script>
+            <span id="new-patient">
+            </span>
         </div>
         <div>
             <h3>Telehealth</h3>
-            <span id="telehealth">
-            </span>
             <script>
-                (document).ready(function () {
-                    $.get("https://api.github.com/repos/plggs/sharonboris.com/contents/files/telehealth", function (data) {
-                        let htmlString = `<table align="center"><tr>`;
+                $.ajax('https://api.github.com/repos/plggs/sharonboris.com/contents/files/telehealth',   // request url
+                {
+                    success: function (data, status, xhr) {
+                        let htmlString = '<table align="center"><tr>';
                         for (let file of data) {
                             htmlString += `<td><a href="${file.path}">${file.name}</a></td>`;
                         }
                         htmlString += '</tr></table>';
 
                         $("#telehealth").html(htmlString);
-                    })
+                    }
                 });
             </script>
+            <span id="telehealth">
+            </span>
         </div>
     </div>
 </section>
