@@ -73,7 +73,7 @@ css: main
                 $.ajax({
                     type: 'GET',
                     crossDomain: true,
-                    dataType: 'jsonp',
+                    dataType: 'json',
                     url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient',
                     success: function (data, status, xhr) {
                         let htmlString = '<ul>';
@@ -95,7 +95,7 @@ css: main
                 $.ajax({
                     type: 'GET',
                     crossDomain: true,
-                    dataType: 'jsonp',
+                    dataType: 'json',
                     url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient',
                     success: function (data, status, xhr) {
                         let htmlString = '<ul>';
