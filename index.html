@@ -10,7 +10,7 @@ css: main
 </head>
 <section id="home">
     <script>
-        var $el = $("#very-specific-design");
+        var $el = $("#background-image");
         var elHeight = $el.outerHeight();
         var elWidth = $el.outerWidth();
     
@@ -42,8 +42,8 @@ css: main
         }
         doResize(null, starterData);
     </script>
-    <div class="scaleable-wrapper">
-        <div class="background-image">
+    <div class="scaleable-wrapper" id="scaleable-wrapper">
+        <div class="background-image" id="background-image">
             <img src='assets/sharon.png' width="300px" height="300px"/>
         </div>
     </div>
