@@ -6,6 +6,7 @@ css: main
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 <section id="home">
     <div>
@@ -24,36 +25,45 @@ css: main
             <br /><br />
             We can use one or a combination of approaches. Whatever suits you best.
         </p>
-        <br /><br />
-        <p>
-            I received a BS degree Magna Cum Laude with a double major in biology and
-            psychology and went on to receive a Master of Social Work degree from Loyola University Chicago.
-            <br /><br />
-            I've worked in counseling programs, holistic medical centers, and teaching hospitals.
-            With that 20 years experience of continually applying different kinds of appraoches to my work, I'll make it 
-            easy for us to work together and choose the best approaches to suit your needs.
-            <br /><br />
-            Throughout my work, I make use of a set of different theoretical modalities that I've immersed myself in 
-            over the years. They'll allows us to more easily put together the best plan for you.
-            <br /><br />
-            We'll make use of Supportive Counseling, Psychodynamic Theory, Cognitive Therapy, and Solution-focused
-            approaches will play a large role, just to name a few.
-            <br /><br />
-            My work focuses on treating <b>depression</b>, <b>anxiety</b>, <b>women's issues</b>, and <b>grief</b> for adults and seniors.
-            <br /><br />
-            <b>I also help with life transitions and offer specialized services to family caregivers</b> including <b>consuting</b>, <b>counseling</b>, and <b>resources</b>.
-        </p>
     </div>
 </section>
 <section id="services">
     <div>
         <h2>Services</h2>
-        <p>
-            Coming soon...
+        <table>
+            <tr>
+              <td id="pad">
+                <div id="icon"><div class="label">Depression</div></div>
+              </td>
+              <td id="pad">
+                <div id="icon"><div class="label">Anxiety</div></div>
+              </td>
+              <td id="pad">
+                <div id="icon"><div class="label">Women's Issues</div></div>
+              </td>
+              <td id="pad">
+                <div id="icon"><div class="label">Life Transitions</div></div>
+              </td>
+              <td id="pad">
+                <div id="icon"><div class="label">Grief</div></div>
+              </td>
+            </tr>
+          </table>
+          <p>
+            I've worked in counseling programs, holistic medical centers, and teaching hospitals.
+            With that 20 years experience of continually applying different kinds of appraoches to my work, I'll make it 
+            easy for us to work together and choose the best approaches to suit your needs.
+            <br /><br />
+            I received a BS degree Magna Cum Laude with a double major in biology and
+            psychology and went on to receive a Master of Social Work degree from Loyola University Chicago.
+            <br /><br />
+            Throughout our time, we'll make use of Supportive Counseling, Psychodynamic Theory, Cognitive Therapy, and Solution-focused
+            approaches will play a large role, just to name a few. They'll allows us to more easily put together the best plan for you.
+            <br /><br />
+            My work focuses on treating <b>depression</b>, <b>anxiety</b>, <b>women's issues</b>, and <b>grief</b> for adults and seniors.
+            <br /><br />
+            <b>I also help with life transitions and offer specialized services to family caregivers</b> including <b>consuting</b>, <b>counseling</b>, and <b>resources</b>.
         </p>
-        <!-- <p>
-            <b>depression</b>, <b>anxiety</b>, <b>women's issues</b>, <b>life transitions</b>, <b>grief</b>
-        <p> -->
     </div>
 </section>
 <section id="financial">
@@ -75,7 +85,7 @@ css: main
                     crossDomain: true,
                     dataType: 'json',
                     url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient',
-                    success: function (data, status, xhr) {
+                    success: function (data) {
                         let htmlString = '<ul>';
                         for (let file of data) {
                             htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
@@ -97,7 +107,7 @@ css: main
                     crossDomain: true,
                     dataType: 'json',
                     url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/telehealth',
-                    success: function (data, status, xhr) {
+                    success: function (data) {
                         let htmlString = '<ul>';
                         for (let file of data) {
                             htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
