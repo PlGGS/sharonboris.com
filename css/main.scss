@@ -106,24 +106,28 @@ section {
 
 section#home {
     background-color: var(--home-color);
-    padding-top: 13.5%;
-    padding-bottom: 13.5%;
+    padding: 0px;
+    padding-top: 70px;
     margin: 0 auto;
+    
+    div {
+        
+    }
 
     .scaleable-wrapper {
+        padding-left: 0%;
+        padding-right: 0%;
         resize: both;
         position: relative;
     }
     
     .background-image {
-        background-image: url('../assets/trees.png');
-        background-repeat: no-repeat;
-        background-size: cover;
+        padding-left: 0%;
+        padding-right: 0%;
         margin-top: 70px;
         width: 100%;
         height: 800px;
         text-align: center;
-        background: white;
         position: relative;
         left: 50%;
         top: 50%;
