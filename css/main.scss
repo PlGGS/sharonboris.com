@@ -16,7 +16,7 @@
 }
 
 :root {
-    --home-color: #4c8dca;
+    --home-color: #5587c9;
     --about-color: #f1fffa;
     --services-color: #ccfccb;
     --financial-color: #96e6b3;
@@ -105,7 +105,7 @@ section {
 }
 
 section#home {
-    background-color: #5587c9;
+    background-color: var(--home-color);
     margin-top: 70px;
     padding: 0px;
     padding-top: 70px;
@@ -133,7 +133,7 @@ section#home {
         height: 800px;
         
         img {
-            padding-top: 135px;
+            padding-top: 145px;
             width: 100%;
             text-align: center;
             position: relative;
