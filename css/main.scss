@@ -40,7 +40,7 @@ header {
   box-sizing: border-box;
   background-color: #373948;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
 }
 
 header h1 {
@@ -116,6 +116,10 @@ section#home {
         padding-right: 0%;
         resize: both;
         position: relative;
+
+        img {
+            z-index: 2;
+        }
     }
     
     .background-image {
@@ -132,6 +136,7 @@ section#home {
             top: 50%;
             transform: translate(-50%, -50%);
             transform-origin: center center;
+            z-index: 1;
         }
     }
 
