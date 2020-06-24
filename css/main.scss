@@ -106,13 +106,30 @@ section {
 
 section#home {
     background-color: var(--home-color);
-    background-image: url('../assets/trees.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 70px;
     padding-top: 13.5%;
     padding-bottom: 13.5%;
     margin: 0 auto;
+
+    .scaleable-wrapper {
+        resize: both;
+        position: relative;
+    }
+    
+    .background-image {
+        background-image: url('../assets/trees.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 70px;
+        width: 100%;
+        height: 800px;
+        text-align: center;
+        background: white;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: center center;
+    }
 
     div {
         text-align: center;
