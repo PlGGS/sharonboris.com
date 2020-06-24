@@ -149,9 +149,6 @@ section#services {
     color: #000000;
 
     div {
-        padding-left: 0px;
-        padding-right: 0px;
-
         h2 {
             color: #000000;
         }
@@ -159,6 +156,11 @@ section#services {
         p {
             color: #000000;
         }
+    }
+
+    table tr td div {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     #icon
