@@ -113,50 +113,42 @@ css: main
 <section id="forms">
     <div>
         <h2>Resources</h2>
-        <div>
-            <h3>New Patients</h3>
-            <script>
-                $.ajax({
-                    type: 'GET',
-                    crossDomain: true,
-                    dataType: 'json',
-                    url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient',
-                    success: function (data) {
-                        let htmlString = '<ul>';
-                        for (let file of data) {
-                            htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
-                        }
-                        htmlString += '</ul>';
-
-                        $("#new-patient").html(htmlString);
+        <h3>New Patients</h3>
+        <script>
+            $.ajax({
+                type: 'GET',
+                crossDomain: true,
+                dataType: 'json',
+                url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient',
+                success: function (data) {
+                    let htmlString = '<ul>';
+                    for (let file of data) {
+                        htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
                     }
-                })
-            </script>
-            <span id="new-patient">
-            </span>
-        </div>
-        <div>
-            <h3>Telehealth</h3>
-            <script>
-                $.ajax({
-                    type: 'GET',
-                    crossDomain: true,
-                    dataType: 'json',
-                    url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/telehealth',
-                    success: function (data) {
-                        let htmlString = '<ul>';
-                        for (let file of data) {
-                            htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
-                        }
-                        htmlString += '</ul>';
+                    htmlString += '</ul>';
 
-                        $("#telehealth").html(htmlString);
+                    $("#new-patient").html(htmlString);
+                }
+            })
+        </script>
+        <h3>Telehealth</h3>
+        <script>
+            $.ajax({
+                type: 'GET',
+                crossDomain: true,
+                dataType: 'json',
+                url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/telehealth',
+                success: function (data) {
+                    let htmlString = '<ul>';
+                    for (let file of data) {
+                        htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
                     }
-                });
-            </script>
-            <span id="telehealth">
-            </span>
-        </div>
+                    htmlString += '</ul>';
+
+                    $("#telehealth").html(htmlString);
+                }
+            });
+        </script>
     </div>
 </section>
 <section id="contact">
