@@ -105,7 +105,7 @@ section {
 }
 
 section#home {
-    background-color: var(--home-color);
+    background-color: #5587c9;
     margin-top: 70px;
     padding: 0px;
     padding-top: 70px;
@@ -118,6 +118,10 @@ section#home {
         position: relative;
 
         img {
+            text-align: center;
+            position: absolute;
+            transform: translate(-50%, -200%);
+            transform-origin: center center;
             z-index: 2;
         }
     }
@@ -129,6 +133,7 @@ section#home {
         height: 800px;
         
         img {
+            padding-top: 135px;
             width: 100%;
             text-align: center;
             position: relative;
