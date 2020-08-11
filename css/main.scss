@@ -190,7 +190,7 @@ section#services {
     }
 
     #summary {
-        width: 500px;
+        transform: translate(0px, -180px);
     }
 
     #icons {
@@ -200,8 +200,12 @@ section#services {
         transform: translate(-50%,0%);
     }
 
-    #icon
-    {
+    #pad {
+        transform: scale(0.8);
+    }
+
+    #icon {
+        transform: translate(0px, -80px);
         -webkit-transition: all 0.5s ease;
         height: 160px;
         width: 160px;
@@ -218,23 +222,17 @@ section#services {
         box-shadow: 0px 0px 5px 5px #fafafa;
     }
 
-    #icon:hover
-    {
+    #icon:hover {
         background: #fafafa;
         color: #4c8dca;
         border: 2px dashed #4c8dca;
         box-shadow: 0px 0px 5px 5px #fafafa;
     }
 
-    .label
-    {
+    .label {
         padding-top: 67px;
         font-size: 20px;
         font-weight: normal;
-    }
-
-    #pad {
-        transform: scale(0.8);
     }
 }
 section#financial {
