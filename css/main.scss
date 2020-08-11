@@ -190,32 +190,24 @@ section#services {
     }
 
     #summary {
-        transform: translate(0px, -180px);
-    }
-
-    #icons {
-        position: relative;
-        padding-top: 2%;
-        left: 50%;
-        transform: translate(-50%,0%);
+        transform: translate(0px, -100px);
     }
 
     #pad {
-        transform: scale(0.8);
+        transform: translate(0px, 65px);
+        padding-top: 20px;
     }
 
     #icon {
         transform: translate(0px, -80px);
         -webkit-transition: all 0.5s ease;
-        height: 160px;
-        width: 160px;
+        height: 100px;
+        width: 100px;
         padding-left: 0px;
         padding-right: 0px;
-        
         border-radius: 90px;
         font-size: 80px;
         text-align: center;
-        
         background: #fafafa;
         color: #001126;
         border: 2px dashed #919191;
@@ -231,8 +223,10 @@ section#services {
 
     .label {
         padding-top: 67px;
-        font-size: 20px;
+        font-size: 12px;
         font-weight: normal;
+        width: 100%;
+        transform: translate(-25.5px, -25.5px);
     }
 }
 section#financial {
