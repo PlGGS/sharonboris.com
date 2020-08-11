@@ -189,11 +189,18 @@ section#services {
         }
     }
 
+    #summary-pad {
+        height: 400px;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left;
+    }
+
     #summary {
         transform: translate(0px, -100px);
     }
 
-    #pad {
+    #icon-pad {
         transform: translate(0px, 65px);
         padding-top: 20px;
     }
