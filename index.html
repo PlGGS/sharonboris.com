@@ -16,10 +16,6 @@ css: main
     
         var $wrapper = $("#scaleable-wrapper");
     
-        $wrapper.resizable({
-            resize: doResize
-        });
-    
         function doResize(event, ui) {
             var scale;
                 
@@ -40,6 +36,7 @@ css: main
                 height: $wrapper.height()
             }
         }
+
         doResize(null, starterData);
     </script>
     <div class="scaleable-wrapper" id="scaleable-wrapper">
@@ -108,7 +105,11 @@ css: main
                 <tr>
                     <td>
                         <div id="icon-pad"><div id="icon"><a href="https://www.aetna.com"><img class="logo" src='assets/aetna.png'/></a></div></div>
+                    </td>
+                    <td>
                         <div id="icon-pad"><div id="icon"><a href="https://www.bcbs.com"><img class="logo" src='assets/bcbs.png'/></a></div></div>
+                    </td>
+                    <td>
                         <div id="icon-pad"><div id="icon"><a href="https://www.medicare.gov"><img class="logo" src='assets/medicare.jpg'/></a></div></div>
                     </td>
                 </tr>
