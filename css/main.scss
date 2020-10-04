@@ -465,7 +465,10 @@ footer {
 
     section h2 {
         font-size: 5em;
-        margin: 0px;
+    }
+
+    section h3 {
+        font-size: 3.5em;
     }
       
     section p {
@@ -473,5 +476,21 @@ footer {
         font-family: 'Open Sans', sans-serif;
         font-weight: 300;
         font-size: 1.5em; 
+    }
+
+    section#forms div ul li a {
+        font-size: 1.5em; 
+    }
+
+    section#services .label {
+        transform: translate(0px, -25.5px);
+    }
+
+    section#services #summary-pad {
+        padding-right: 10px;
+    }
+
+    section#services div p {
+        font-size: 3em;
     }
 }
