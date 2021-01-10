@@ -39,8 +39,8 @@
   
                 $(document).scroll(function() {
      
-                    var position = Math.floor($(this).scrollTop() / 800) + 1;
-    
+                    var position = Math.floor(($(this).scrollTop() + 70) / 800) + 1;
+                    
                     $('nav a.active').removeClass('active');
                     $('nav a.link-' + position).addClass('active');
     

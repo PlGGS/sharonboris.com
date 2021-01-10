@@ -6,9 +6,43 @@ css: main
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 <section id="home">
-    <div>
+    <script>
+        var $el = $("#background-image");
+        var elHeight = $el.outerHeight();
+        var elWidth = $el.outerWidth();
+    
+        var $wrapper = $("#scaleable-wrapper");
+    
+        function doResize(event, ui) {
+            var scale;
+                
+            scale = Math.min(
+                ui.size.width / elWidth,    
+                ui.size.height / elHeight
+            );
+            
+            $el.css({
+                transform:`translate('-50%', '-50%') scale(${scale})`
+            });
+            
+        }
+    
+        var starterData = { 
+            size: {
+                width: $wrapper.width(),
+                height: $wrapper.height()
+            }
+        }
+
+        doResize(null, starterData);
+    </script>
+    <div class="scaleable-wrapper" id="scaleable-wrapper">
+        <div class="background-image" id="background-image">
+            <img src='assets/trees.png'/>
+        </div>
         <img src='assets/sharon.png' width="300px" height="300px"/>
     </div>
 </section>
@@ -24,93 +58,108 @@ css: main
             <br /><br />
             We can use one or a combination of approaches. Whatever suits you best.
         </p>
-        <br /><br />
-        <p>
-            I received a BS degree Magna Cum Laude with a double major in biology and
-            psychology and went on to receive a Master of Social Work degree from Loyola University Chicago.
-            <br /><br />
-            I've worked in counseling programs, holistic medical centers, and teaching hospitals.
-            With that 20 years experience of continually applying different kinds of appraoches to my work, I'll make it 
-            easy for us to work together and choose the best approaches to suit your needs.
-            <br /><br />
-            Throughout my work, I make use of a set of different theoretical modalities that I've immersed myself in 
-            over the years. They'll allows us to more easily put together the best plan for you.
-            <br /><br />
-            We'll make use of Supportive Counseling, Psychodynamic Theory, Cognitive Therapy, and Solution-focused
-            approaches will play a large role, just to name a few.
-            <br /><br />
-            My work focuses on treating <b>depression</b>, <b>anxiety</b>, <b>women's issues</b>, and <b>grief</b> for adults and seniors.
-            <br /><br />
-            <b>I also help with life transitions and offer specialized services to family caregivers</b> including <b>consuting</b>, <b>counseling</b>, and <b>resources</b>.
-        </p>
     </div>
 </section>
 <section id="services">
     <div>
         <h2>Services</h2>
-        <p>
-            Coming soon...
-        </p>
-        <!-- <p>
-            <b>depression</b>, <b>anxiety</b>, <b>women's issues</b>, <b>life transitions</b>, <b>grief</b>
-        <p> -->
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <div id=summary-pad>
+                            <p id="summary">
+                                I've worked in counseling programs, holistic medical centers, and teaching hospitals.
+                                With that 20 years experience of continually applying different kinds of appraoches to my work, I'll make it 
+                                easy for us to work together and choose the best approaches to suit your needs.
+                                <br /><br />
+                                I received a BS degree Magna Cum Laude with a double major in biology and
+                                psychology and went on to receive a Master of Social Work degree from Loyola University Chicago.
+                                <br /><br />
+                                My work focuses on treating <b>depression</b>, <b>anxiety</b>, <b>women's issues</b>, and <b>grief</b> for adults and seniors.
+                                <br /><br />
+                                <b>I also help with life transitions and offer specialized services to family caregivers</b> including <b>consuting</b>, <b>counseling</b>, and <b>resources</b>.
+                                <br /><br />
+                                Throughout our time, we'll make use of supportive counseling, psychodynamic theory, cognitive therapy, and Solution-focused
+                                approaches to more easily put together the best plan for you.
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="icon-pad"><div id="icon"><div class="label">Depression</div></div></div>
+                        <div id="icon-pad"><div id="icon"><div class="label">Anxiety</div></div></div>
+                        <div id="icon-pad"><div id="icon"><div class="label">Women's Issues</div></div></div>
+                        <div id="icon-pad"><div id="icon"><div class="label">Life Transitions</div></div></div>
+                        <div id="icon-pad"><div id="icon"><div class="label">Grief</div></div></div>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
     </div>
 </section>
 <section id="financial">
     <div>
-        <h2>Insurance Information</h2>
-        <p>
-            Coming soon...
-        </p>
+        <h2>Insurance Providers</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <div id="icon-pad"><div id="icon"><a href="https://www.aetna.com"><img class="logo" src='assets/aetna.png'/></a></div></div>
+                    </td>
+                    <td>
+                        <div id="icon-pad"><div id="icon"><a href="https://www.bcbs.com"><img class="logo" src='assets/bcbs.png'/></a></div></div>
+                    </td>
+                    <td>
+                        <div id="icon-pad"><div id="icon"><a href="https://www.medicare.gov"><img class="logo" src='assets/medicare.jpg'/></a></div></div>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
     </div>
 </section>
 <section id="forms">
     <div>
         <h2>Resources</h2>
-        <div>
-            <h3>New Patients</h3>
-            <script>
-                $.ajax({
-                    type: 'GET',
-                    crossDomain: true,
-                    dataType: 'json',
-                    url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient',
-                    success: function (data, status, xhr) {
-                        let htmlString = '<ul>';
-                        for (let file of data) {
-                            htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
-                        }
-                        htmlString += '</ul>';
-
-                        $("#new-patient").html(htmlString);
+        <h3>New Clients</h3>
+        <script>
+            $.ajax({
+                type: 'GET',
+                crossDomain: true,
+                dataType: 'json',
+                url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/new-patient',
+                success: function (data) {
+                    let htmlString = '<ul>';
+                    for (let file of data) {
+                        htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
                     }
-                })
-            </script>
-            <span id="new-patient">
-            </span>
-        </div>
-        <div>
-            <h3>Telehealth</h3>
-            <script>
-                $.ajax({
-                    type: 'GET',
-                    crossDomain: true,
-                    dataType: 'json',
-                    url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/telehealth',
-                    success: function (data, status, xhr) {
-                        let htmlString = '<ul>';
-                        for (let file of data) {
-                            htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
-                        }
-                        htmlString += '</ul>';
+                    htmlString += '</ul>';
 
-                        $("#telehealth").html(htmlString);
+                    $("#new-patient").html(htmlString);
+                }
+            })
+        </script>
+        <span id="new-patient">
+        </span>
+        <h3>Telehealth</h3>
+        <script>
+            $.ajax({
+                type: 'GET',
+                crossDomain: true,
+                dataType: 'json',
+                url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/telehealth',
+                success: function (data) {
+                    let htmlString = '<ul>';
+                    for (let file of data) {
+                        htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
                     }
-                });
-            </script>
-            <span id="telehealth">
-            </span>
-        </div>
+                    htmlString += '</ul>';
+
+                    $("#telehealth").html(htmlString);
+                }
+            });
+        </script>
+        <span id="telehealth">
+        </span>
     </div>
 </section>
 <section id="contact">
