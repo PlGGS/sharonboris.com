@@ -328,7 +328,13 @@ section#forms {
 
     @media screen and (max-width:1024px){
         .container{
-            grid-template-columns: repeat(2,1fr);
+            padding-left: 15%;
+            padding-right: 15%;
+            transform: scale(1.2);
+        }
+
+        .label {
+            transform: translate(0px, 0px);
         }
     }
 }
