@@ -126,6 +126,19 @@ section#home {
             transform-origin: center center;
             z-index: 2;
         }
+        
+        nav a {
+            text-align: center;
+            color: white;
+            font-size: 52px;
+            text-decoration: none;
+            -moz-transition: color 1s ease;
+            -o-transition: color 1s ease;
+            transition: color 1s ease;
+            position: absolute;
+            transform: translate(-50%, -260px);
+            z-index: 2;
+        }
     }
     
     .background-image {
