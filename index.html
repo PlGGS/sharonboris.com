@@ -172,7 +172,7 @@ css: main
                 success: function (data) {
                     let htmlString = '<div class="container">';
                     for (let file of data) {
-                        htmlString += `<div id="gallery-item"><div id="image" style="grid-column: span 1;"><a href="${file.path}">${file.name}</a></div></div>`;
+                        htmlString += `<div id="icon-pad"><div id="icon" style="grid-column: span 1;"><a href="${file.path}"><div id="label">${file.name}</div></a></div></div>`;
                     }
                     htmlString += '</div>'
                     $("#" + dir).html(htmlString);
@@ -183,6 +183,11 @@ css: main
     <div>
         <h2>Forms and Resources</h2>
         <h3>New Clients</h3>
+        <div id="icon-pad">
+            <div id="icon">
+                <div class="label">Anxiety</div>
+            </div>
+        </div>
         <script>
             getFileBubbles('new-patient');
         </script>
