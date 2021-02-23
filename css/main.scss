@@ -280,7 +280,7 @@ section#forms {
         padding-left: 0px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-gap: 10px;
+        grid-gap: 25px;
     }
 
     #image {
@@ -320,7 +320,7 @@ section#forms {
     .label {
         padding-top: 45%;
         color: black;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: normal;
         width: 100%;
         transform: translate(-25.5px, -25.5px);
