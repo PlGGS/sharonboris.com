@@ -579,3 +579,15 @@ footer {
         font-size: 3em;
     }
 }
+
+@media (max-device-height: 768px) {
+    section#home .scaleable-wrapper nav {
+        img {
+            transform: translate(-50%, -240%);
+        }
+
+        a {
+            transform: translate(-50%, -390px);
+        }
+    }
+}
