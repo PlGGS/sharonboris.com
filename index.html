@@ -18,7 +18,6 @@ css: main
 
         function doResize(event, ui) {
             var scale;
-
             scale = Math.min(
                 ui.size.width / elWidth,
                 ui.size.height / elHeight
@@ -27,7 +26,6 @@ css: main
             $el.css({
                 transform: `translate('-50%', '-50%') scale(${scale})`
             });
-
         }
 
         var starterData = {
@@ -47,7 +45,7 @@ css: main
     </div>
 </section>
 <section id="about">
-    <div>
+    <div class="inner">
         <h2>Welcome</h2>
         <p>
             Here at Sharon Boris, LCSW, LLC, I am pleased to offer you a supportive and
@@ -61,7 +59,7 @@ css: main
     </div>
 </section>
 <section id="services">
-    <div>
+    <div class="inner">
         <h2>Services</h2>
         <table>
             <tbody>
@@ -123,7 +121,7 @@ css: main
     </div>
 </section>
 <section id="financial">
-    <div>
+    <div class="inner">
         <h2>Insurance Providers</h2>
         <table>
             <tbody>
@@ -180,7 +178,7 @@ css: main
             })
         }
     </script>
-    <div>
+    <div class="inner">
         <h2>Forms and Resources</h2>
         <h3>New Clients</h3>
         <script>
@@ -197,7 +195,7 @@ css: main
     </div>
 </section>
 <section id="contact">
-    <div>
+    <div class="inner">
         <h2>Contact Sharon Boris</h2>
         <p>
             Feel free to call Sharon at <a href="tel:630-734-0147">(630)-734-0147</a> with any questions,
