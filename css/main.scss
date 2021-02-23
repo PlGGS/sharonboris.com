@@ -281,6 +281,7 @@ section#forms {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 25px;
+        padding-bottom: 20px;
     }
 
     #image {
@@ -331,10 +332,6 @@ section#forms {
             padding-left: 15%;
             padding-right: 15%;
             transform: scale(1.2);
-        }
-
-        .label {
-            transform: translate(0px, 0px);
         }
     }
 }
