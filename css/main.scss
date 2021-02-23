@@ -209,6 +209,10 @@ section#services {
         padding-left: 0;
         padding-right: 0;
         text-align: left;
+
+        ul {
+            transform: translate(30px, -110px);
+        }
     }
 
     #summary {
