@@ -581,12 +581,12 @@ footer {
 }
 
 @media (max-device-height: 768px) {
-    section#home .scaleable-wrapper nav {
+    section#home .scaleable-wrapper {
         img {
             transform: translate(-50%, -240%);
         }
 
-        a {
+        nav a {
             transform: translate(-50%, -390px);
         }
     }
