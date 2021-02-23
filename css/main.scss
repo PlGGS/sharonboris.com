@@ -233,11 +233,6 @@ section#services {
         width: 100%;
         transform: translate(-25.5px, -25.5px);
     }
-
-    .inner table tbody tr td div {
-        padding-left: 0%;
-        padding-right: 0%;
-    }
 }
 section#financial {
     background-color: var(--financial-color);
@@ -527,15 +522,12 @@ footer {
         padding-left: 0;
         padding-right: 0;
     }
-
     section h2 {
         font-size: 5em;
     }
-
     section h3 {
         font-size: 2.5em;
     }
-      
     section p {
         color: white;
         font-family: 'Open Sans', sans-serif;
@@ -547,10 +539,12 @@ footer {
         font-size: 1.5em; 
     }
 
-    section#services .label {
+    section#services .inner table tbody tr td div {
+        padding-right: 0%;
+    } 
+    section#services .label{
         transform: translate(0px, -25.5px);
     }
-
     section#services #summary-pad {
         padding-right: 10px;
     }
