@@ -86,12 +86,15 @@ css: main
                                     caregivers</b> including <b>consulting</b>, <b>counseling</b>, and <b>resources</b>.
                                 <br /><br />
                                 Throughout our time, we'll put together the best plan for you using:
-                                 * Supportive counseling
-                                 * Cognitive therapy
-                                 * Psychodynamic theory
-                                 * Solution-focused procedures
-                                 * Mind-body techniques
                             </p>
+                            <ul>
+                                <li>Supportive counseling</li>
+                                <li>Cognitive therapy</li>
+                                <li>Psychodynamic theory</li>
+                                <li>Solution-focused procedures</li>
+                                <li>Mind-body techniques</li>
+                                <li>Psychodynamic</li>
+                            </ul>
                         </div>
                     </td>
                     <td>
@@ -177,7 +180,7 @@ css: main
                 url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/' + dir,
                 success: function (data) {
                     let containerForms = [];
-                    
+
                     //add files in reverse order as of mom's request
                     for (let file of data) {
                         containerForms.unshift(`<div id="icon-pad"><div id="icon" style="grid-column: span 1;"><a href="${file.path}"><div class="label">${file.name}</div></a></div></div>`);
