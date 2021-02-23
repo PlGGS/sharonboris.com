@@ -233,6 +233,11 @@ section#services {
         width: 100%;
         transform: translate(-25.5px, -25.5px);
     }
+
+    .inner table tbody tr td div {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
 }
 section#financial {
     background-color: var(--financial-color);
@@ -266,6 +271,10 @@ section#financial {
         margin-top: 2%;
         padding-top: 25%;
         width: 85%;
+    }
+
+    .inner table {
+        margin-left: 10%;
     }
 }
 section#forms {
@@ -536,6 +545,10 @@ footer {
 
     section#forms div ul li a {
         font-size: 1.5em; 
+    }
+
+    section#services .label {
+        transform: translate(0px, -25.5px);
     }
 
     section#services #summary-pad {
