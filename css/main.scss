@@ -277,12 +277,10 @@ section#forms {
     }
 
     .container{
-        margin: auto auto 100px auto;
-        text-align: center;
+        padding-left: 0px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-gap: 10px;
-        grid-auto-flow: dense;
     }
 
     #image {
@@ -320,7 +318,8 @@ section#forms {
     }
 
     .label {
-        padding-top: 67px;
+        padding-top: 45%;
+        color: black;
         font-size: 12px;
         font-weight: normal;
         width: 100%;
