@@ -182,7 +182,7 @@ css: main
 
                     //add files in reverse order as of mom's request
                     for (let file of data) {
-                        containerForms.unshift(`<div id="icon-pad"><div id="icon" style="grid-column: span 1;"><a href="${file.path}"><div class="label">${file.name}</div></a></div></div>`);
+                        containerForms.unshift(`<div id="icon-pad"><div id="icon" style="grid-column: span 1;"><a href="${file.path}" target="_blank" rel="noopener noreferrer"><div class="label">${file.name}</div></a></div></div>`);
                     }
                     containerForms.unshift('<div class="container">');
                     containerForms.push('</div>');
