@@ -43,6 +43,18 @@ header {
   background-color: #373948;
   position: fixed;
   z-index: 100;
+  
+  div {
+    background-color: #ebe65a;
+    margin: 5px;
+    padding: 5px;
+    transform: translate(0px, 14px);
+    
+    h2 {
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+  }
 }
 
 header h1 {

@@ -1,47 +1,49 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>{{page.title}}</title>
-        <link rel="favicon" type="image/x-icon" href="/assets/favicon.png" />
-        <!--<link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">-->
-        {% for item in page.css %}
-        <link rel="stylesheet" type="text/css" href="/css/{{ item }}.css?{{site.time | date: '%s%N'}}">
-        {% endfor %}
-        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-        <!--<script src="{{ "/script/page-loader.js" | prepend: site.baseurl }}"></script>-->
-        {% for item in page.js %}
-        <script src="/script/{{ item }}.js"></script>
-        {% endfor %}
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{page.title}}</title>
+    <link rel="favicon" type="image/x-icon" href="/assets/favicon.png" />
+    <!--<link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">-->
+    {% for item in page.css %}
+    <link rel="stylesheet" type="text/css" href="/css/{{ item }}.css?{{site.time | date: '%s%N'}}">
+    {% endfor %}
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <!--<script src="{{ "/script/page-loader.js" | prepend: site.baseurl }}"></script>-->
+    {% for item in page.js %}
+    <script src="/script/{{ item }}.js"></script>
+    {% endfor %}
+</head>
+
+<body>
     <header>
         <script>
-            $(document).ready(function() {
+            $(document).ready(function () {
                 // On click, remove class on active element, add it to the new one
-                $('nav a').click(function(e) {
-    
+                $('nav a').click(function (e) {
+
                     $('header nav a.active').removeClass('active');
                     $(this).addClass('active');
-    
+
                     // Scroll to anchor
-                    $('html,body').animate({scrollTop: $($(this).attr('href')).offset().top - 70},'slow');
-    
+                    $('html,body').animate({ scrollTop: $($(this).attr('href')).offset().top - 70 }, 'slow');
+
                     e.preventDefault();
                     return false;
                 });
-  
+
                 // On scroll, remove class on active element and add it to the new one
-                $(document).scroll(function() {
-     
+                $(document).scroll(function () {
+
                     var position = Math.floor(($(this).scrollTop() + 70) / 800) + 1;
-                    
+
                     $('nav a.active').removeClass('active');
                     $('nav a.link-' + position).addClass('active');
                 });
             });
         </script>
-        
+
         <h1>Sharon Boris, LCSW, LLC</h1>
         <nav role='navigation'>
             <ul>
@@ -53,24 +55,39 @@
                 <li><a class="link-6 entypo-mail" href="#contact"></a></li>
             </ul>
         </nav>
-    </header>
-        <div class="content">
-            {{ content }}
+        <br>
+        <br>
+        <br>
+        <div>
+            <h2>
+                ATTENTION: I will be out of the office from roughly December 26th through January 17th. If you'd like to
+                reach out, please plan to call on or after January 10th, 2022.
+            </h2>
+            <h2>
+                If you are an existing client, my colleague Ann Carlson, LCSW will be available for questions or brief
+                phone calls at <a href="tel:630-318-2805">630-318-2805</a>.
+                If this is a life-threatening emergency, please dial 911 or go to your nearest emergency room.
+            </h2>
         </div>
-        <footer>
-            <nav class="nav" role='navigation'>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#financial">Insurance</a></li>
-                    <li><a href="#forms">Forms</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="footer-end">
-                <p>Designed by: <a href="https://blakeboris.com">Blake Boris</a></p>
-            </div>
-        </footer>
-    </body>
+    </header>
+    <div class="content">
+        {{ content }}
+    </div>
+    <footer>
+        <nav class="nav" role='navigation'>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#financial">Insurance</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer-end">
+            <p>Designed by: <a href="https://blakeboris.com">Blake Boris</a></p>
+        </div>
+    </footer>
+</body>
+
 </html>
