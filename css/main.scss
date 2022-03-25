@@ -299,10 +299,6 @@ section#financial {
         padding-top: 25%;
         width: 85%;
     }
-
-    .inner table {
-        margin-left: 10%;
-    }
 }
 section#forms {
     background-color: var(--forms-color);
@@ -578,8 +574,8 @@ footer {
 
     section#financial .inner table {
         padding-top: 20px;
-        margin-left: 25%;
         transform: scale(1.2);
+        width: 80%;
     }
 
     section#forms div ul li a {
