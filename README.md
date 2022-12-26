@@ -1,6 +1,6 @@
 # https://sharonboris.com
 ## By: Blake Boris
-My mom's website
+My mom's website made with [Jekyll](https://jekyllrb.com/)
 
 ### How it works
 the layout file containing the `<head>`, footer, and navbar is saved in `_layouts/`. All `.html` files starting with
