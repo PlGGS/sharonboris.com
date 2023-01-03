@@ -4,19 +4,148 @@
 @import url(https://fonts.googleapis.com/css?family=Meddon);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300);
 @import url(https://weloveiconfonts.com/api/?family=entypo);
-            
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  -webkit-text-stroke-width: 0.6px;
+  -webkit-text-stroke-color: black;
+}
+
+@font-face {
+    font-family: "Peaches";
+    src: url(../fonts/Cream-Peach.ttf) format("truetype");
+}
+
+:root {
+    --text-color: #262626;
+
+    --home-color: #5587c9;
+    --about-color: #eff9f0;
+    --services-color: #defcde;
+    --financial-color: #ccfccb;
+    --forms-color: #acf9c8;
+    --contact-color: #96e6b3;
+    --etc-color: #416847;
+  }
+
+body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-color: #ccc;
+    margin: auto;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  box-sizing: border-box;
+  background-color: #373948;
+  position: fixed;
+  z-index: 100;
+  
+  div {
+    background-color: #ebe65a;
+    margin: 5px;
+    padding: 5px;
+    transform: translate(0px, 14px);
+    
+    h2 {
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+  }
+}
+
+header h1 {
+  float: left;
+  color: white;
+  font-family: 'Peaches';
+  margin: 18px auto 12px 20px;
+}
+
+header nav ul {
+  height: 70px;
+  float: right;
+}
+
+header nav ul li {
+  height: 70px;
+  display: inline-block;
+}
+
+header nav ul li a {
+  height: 30px;
+  display: block;
+  padding: 17px 20px;
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
+  border-top: 3px solid #373948;
+  border-bottom: 3px solid #373948;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+header nav ul li a:hover{
+  color: #373948;
+}
+
+header nav ul li a.active{
+  height: 33px;
+  border-bottom: none;
+}
+
+header nav ul li a.link-1 { background-color: var(--home-color) }
+header nav ul li a.link-2 { background-color: var(--about-color); }
+header nav ul li a.link-3 { background-color: var(--services-color); }
+header nav ul li a.link-4 { background-color: var(--financial-color); }
+header nav ul li a.link-5 { background-color: var(--forms-color); }
+header nav ul li a.link-6 { background-color: var(--contact-color); }
+header nav ul li a.link-7 { background-color: var(--etc-color); }
+
+section {
+    width: 100%;
+    height: 800px;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow: hidden;
+
+    div {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+}
+
 section#home {
     background-color: var(--home-color);
     margin-top: 70px;
     padding: 0px;
     padding-top: 70px;
     margin: 0 auto;
+    height: 400px;
     
     .scaleable-wrapper {
         padding-left: 0%;
         padding-right: 0%;
         resize: both;
         position: relative;
+        height: 100%; 
+        text-align: center; 
+        display: table;
+        width: 100%;
+
+        h1 {
+            font-size: 60pt;
+            margin: 0;
+            display:table-cell;
+            vertical-align:middle;
+        }
 
         img {
             text-align: center;
@@ -130,26 +259,23 @@ section#services {
         padding-left: 0px;
         padding-right: 0px;
         border-radius: 90px;
-        font-size: 800px;
+        font-size: 80px;
         text-align: center;
         background: #fafafa;
         color: #001126;
         border: 2px dashed #919191;
         box-shadow: 0px 0px 5px 5px #fafafa;
-        vertical-align: middle;
-        line-height: 20px;
+    }
 
-        p {
-            font-size: 12pt;
-            transform: translate(0px, -15px);
-            text-align: center;
-            vertical-align: baseline;
-            display: inline-block;
-        }
+    #icon:hover {
+        background: #fafafa;
+        color: #4c8dca;
+        border: 2px dashed #4c8dca;
+        box-shadow: 0px 0px 5px 5px #fafafa;
     }
 
     .label {
-        padding-top: 53px;
+        padding-top: 67px;
         font-size: 12px;
         font-weight: normal;
         width: 100%;
@@ -221,10 +347,13 @@ section#forms {
         transition: 0.5s ease-in-out;
     }
 
+    #icon-pad {
+    }
+
     #icon {
         -webkit-transition: all 0.5s ease;
-        height: 35px;
-        width: 200px;
+        height: 100px;
+        width: 100px;
         padding-left: 0px;
         padding-right: 0px;
         border-radius: 90px;
@@ -236,13 +365,13 @@ section#forms {
         box-shadow: 0px 0px 5px 5px #fafafa;
     }
 
-    .label h1 {
-        font-size: 14px;
+    .label {
+        padding-top: 50%;
+        color: black;
+        font-size: 11px;
         font-weight: normal;
-        width: 200%;
-        text-align: left;
-        padding-left: 10px;
-        transform: translate(-50px, 0px);
+        width: 100%;
+        transform: translate(-25.5px, -25.5px);
     }
 
     @media screen and (max-width:1024px){
@@ -259,28 +388,182 @@ section#contact {
 }
 
 section {
-    width: 100%;
-    height: 800px;
-    box-sizing: border-box;
-    padding: 20px;
-    overflow: hidden;
-}
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 
-section .inner {
-    padding-left: 25%;
-    padding-right: 25%;
+    ul {
+        list-style-type: none;
+    }
+    
+    .inner p a {
+        color: white;
+        font-weight: bold;
+    }
 }
 
 section h2 {
-    font-size: 3.5em;
-    padding-bottom: 10px;
-    margin: 0px;
+  font-size: 3em;
+  margin: 0px;
 }
 
 section p {
-    color: white;
-    font-weight: 300;
-    font-size: 1.3em; 
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1em; 
+}
+
+footer {
+    background: #272727;
+    padding-top: 1px;
+}
+
+.icon {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.icon ul {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.icon ul li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+    border-radius: 100%;
+    background: #7DCEA0;
+}
+
+.icon ul li a {
+    text-decoration: none;
+    color: #272727;
+    font-size: 25px;
+    display: block;
+}
+
+.icon ul li a i {
+    line-height: 50px;
+}
+
+.icon ul li:hover {
+    background: #e67e22;
+}
+
+.icon ul li a:hover > i {
+    transform: scale(1.6) rotate(25deg);
+}
+
+.nav {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.nav ul {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+
+.nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav ul li a:hover {
+    color: #e67e22;
+}
+
+.footer-end {
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer-end p {
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.footer-end a {
+    text-decoration: none;
+    color: #fff
+}
+
+.footer-end a:hover {
+    color: #e67e22;
+}
+
+@media(max-width:604px ) {
+    .nav ul li {
+        padding: 0px;
+    }
+}
+
+@media(max-width:559px ) {
+
+    .nav1 ul li a, .nav ul li a {
+        font-size: 13px;
+    }
+}
+
+@media(max-width:539px ) {
+    .nav ul li {
+        margin: 5px 20px;
+    }
+
+    .nav ul li.p1 {
+        padding-top: 10px;
+    }
+}
+
+@media(max-width:380px ) {
+    .nav ul li, .nav1 ul li {
+        display: block;
+        padding: 5px;
+    }
+
+    .icon ul li a i {
+        line-height: 38px;
+    }
+
+    .icon ul li a {
+        font-size: 20px;
+    }
+
+    .icon ul li {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media(max-width: 375px) {
+    .nav ul li.p1 {
+        padding-top: 0px;
+    }
 }
 
 @media (max-device-width : 1024px) {
@@ -289,8 +572,7 @@ section p {
         padding-right: 0;
     }
     section h2 {
-        font-size: 3.5em;
-        margin: 0px;
+        font-size: 5em;
     }
     section h3 {
         font-size: 2.5em;
@@ -302,22 +584,18 @@ section p {
         font-size: 1.3em; 
     }
 
-    section#about p {
-        font-size: 1.8em;
+    section#about div p {
+        font-size: 2em;
     }
 
-    section#services {
-        #icon-pad { display: none; }
-        #plan { display: none; }
-        
+    section#financial .inner table {
+        padding-top: 15px;
+        transform: scale(1.2);
+        padding-left: 86px;
     }
 
-    section#services p {
-        font-size: 1.8em;
-    }
-
-    section#services .inner table {
-        padding-top: 100px;
+    section#forms div ul li a {
+        font-size: 1.5em; 
     }
 
     section#services .inner table tbody tr td div {
@@ -330,27 +608,19 @@ section p {
         padding-right: 10px;
     }
 
-    section#financial .inner table {
-        padding-top: 15px;
-        transform: scale(1.2);
-        padding-left: 86px;
-    }
-
-    section#forms .label {
-        font-size: 11pt; 
-    }
-
     section#contact div p {
         font-size: 2em;
     }
 }
 
 @media (max-device-height: 768px) {
-    section#home .scaleable-wrapper .sharon {
-        transform: translate(-50%, -240%);
-    }
+    section#home .scaleable-wrapper {
+        .sharon {
+            transform: translate(-50%, -240%);
+        }
 
-    section#home .scaleable-wrapper nav a {
-        transform: translate(-50%, -390px);
+        nav a {
+            transform: translate(-50%, -390px);
+        }
     }
 }

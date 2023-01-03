@@ -85,41 +85,44 @@ css: main
                                 <b>I also help with life transitions and offer specialized services to family
                                     caregivers</b> including <b>consulting</b>, <b>counseling</b>, and <b>resources</b>.
                                 <br /><br />
+                                <br /><br />
                                 Throughout our time, we'll put together the best plan for you using:
                             </p>
-                            <ul>
-                                <li>Supportive counseling</li>
-                                <li>Cognitive therapy</li>
-                                <li>Psychodynamic theory</li>
-                                <li>Solution-focused procedures</li>
-                                <li>Mind-body techniques</li>
-                            </ul>
+                            <a id="plan">
+                                <ul>
+                                    <li>Supportive counseling</li>
+                                    <li>Cognitive therapy</li>
+                                    <li>Psychodynamic theory</li>
+                                    <li>Solution-focused procedures</li>
+                                    <li>Mind-body techniques</li>
+                                </ul>
+                            </a>
                         </div>
                     </td>
                     <td>
                         <div id="icon-pad">
                             <div id="icon">
-                                <div class="label">Depression</div>
+                                <div class="label"><h1>Depression</h1></div>
                             </div>
                         </div>
                         <div id="icon-pad">
                             <div id="icon">
-                                <div class="label">Anxiety</div>
+                                <div class="label"><h1>Anxiety</h1></div>
                             </div>
                         </div>
                         <div id="icon-pad">
                             <div id="icon">
-                                <div class="label">Women's Issues</div>
+                                <div class="label"><h1 style="transform: translate(0px, -11px)">Women's Issues</h1></div>
                             </div>
                         </div>
                         <div id="icon-pad">
                             <div id="icon">
-                                <div class="label">Life Transitions</div>
+                                <div class="label"><h1 style="transform: translate(0px, -11px)">Life Transitions</h1></div>
                             </div>
                         </div>
                         <div id="icon-pad">
                             <div id="icon">
-                                <div class="label">Grief</div>
+                                <div class="label"><h1>Grief</h1></div>
                             </div>
                         </div>
                     </td>
@@ -163,52 +166,9 @@ css: main
         </table>
     </div>
 </section>
-<section id="forms">
-    <script>
-        /*
-         * Creates url bubbles for each file located at https://api.github.com/repos/plggs/sharonboris.com/contents/files/ + dir
-         * @param string dir The directory name to pull file names from
-         */
-        function getFileBubbles(dir) {
-            $.ajax({
-                type: 'GET',
-                crossDomain: true,
-                dataType: 'json',
-                url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/' + dir,
-                success: function (data) {
-                    let containerForms = [];
-
-                    //add files in reverse order as of mom's request
-                    for (let file of data) {
-                        containerForms.unshift(`<div id="icon-pad"><div id="icon" style="grid-column: span 1;"><a href="${file.path}" target="_blank" rel="noopener noreferrer"><div class="label">${file.name}</div></a></div></div>`);
-                    }
-                    containerForms.unshift('<div class="container">');
-                    containerForms.push('</div>');
-
-                    $("#" + dir).html(containerForms.join(''));
-                }
-            })
-        }
-    </script>
-    <div class="inner">
-        <h2>Forms and Resources</h2>
-        <h3>New Clients</h3>
-        <script>
-            getFileBubbles('new-patient');
-        </script>
-        <span id="new-patient">
-        </span>
-        <h3>Telehealth</h3>
-        <script>
-            getFileBubbles('telehealth');
-        </script>
-        <span id="telehealth">
-        </span>
-    </div>
-</section>
 <section id="contact">
     <div class="inner">
-        <h2>Contact Sharon Boris</h2>
+        <h2>Contact</h2>
         <p>
             <a href="https://goo.gl/maps/jdbjJhKWGncf9TEx5">
                 <b>
