@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{page.title}}</title>
+    <link rel="favicon" type="image/x-icon" href="/assets/favicon.png" />
+    <!--<link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">-->
+    {% for item in page.css %}
+    <link rel="stylesheet" type="text/css" href="/css/{{ item }}.css?{{site.time | date: '%s%N'}}">
+    {% endfor %}
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <!--<script src="{{ "/script/page-loader.js" | prepend: site.baseurl }}"></script>-->
+    {% for item in page.js %}
+    <script src="/script/{{ item }}.js"></script>
+    {% endfor %}
+    <style type="text/css">
+            @import url(https://weloveiconfonts.com/api/?family=entypo);
+
+            /* entypo */
+            [class*="entypo-"]:before {
+            font-family: 'entypo', sans-serif;
+            -webkit-text-stroke-width: 0.6px;
+            -webkit-text-stroke-color: black;
+            }
+
+            @font-face {
+                font-family: "Peaches";
+                src: url(../fonts/Cream-Peach.ttf) format("truetype");
+            }
+
+            :root {
+                --text-color: #262626;
+
+                --header-color: #2c2e3a;
+
+                --home-color: #5587c9;
+                --about-color: #eff9f0;
+                --services-color: #defcde;
+                --financial-color: #ccfccb;
+                --forms-color: #acf9c8;
+                --contact-color: #96e6b3;
+                --etc-color: #3e7546;
+                --etc-dropdown-item-color: #40685a;
+            }
+
+            body, ul, li {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: #ccc;
+                margin: auto;
+            }
+
+            header {
+                width: 100%;
+                height: 70px;
+                background-color: var(--header-color);
+                position: fixed;
+                z-index: 100;
+            }
+            header div {
+                background-color: #ebe65a;
+                margin: 5px;
+                padding: 5px;
+                transform: translate(0px, 14px);
+            }
+            header div h2 {
+                padding-left: 120px;
+                padding-right: 120px;
+            }
+
+            header h1 {
+                float: left;
+                color: white;
+                font-family: 'Peaches';
+                margin: 18px auto 12px 20px;
+            }
+
+            header nav ul {
+                height: 70px;
+                float: right;
+            }
+
+            header nav ul li {
+                height: 70px;
+                width: 70px;
+                display: inline-block;
+            }
+
+            header nav ul li a {
+                height: 30px;
+                display: block;
+                padding: 17px 20px;
+                text-align: center;
+                color: white;
+                font-size: 2em;
+                text-decoration: none;
+                border-top: 3px solid #373948;
+                border-bottom: 3px solid #373948;
+                -webkit-transition: color 1s ease;
+                -moz-transition: color 1s ease;
+                -o-transition: color 1s ease;
+                transition: color 1s ease;
+            }
+
+            header nav ul li a:hover{
+                color: #373948;
+            }
+
+            header nav ul li a.active{
+                height: 33px;
+                border-bottom: none;
+            }
+
+            .dropdown_menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                perspective: 1000px;
+                display: none;
+                animation: scaleDown 300ms ease-in-out forwards;
+                float: right;
+                left: 100%;
+                transform: translate(-140px, 0px);
+            }
+
+            .dropdown:hover .dropdown_menu--animated {
+                display: block
+            }
+
+            .dropdown_menu li {
+                color: white;
+                background-color: #34495e;
+                padding: 10px 20px;
+                font-size: 10px;
+                width: 100px;
+            }
+
+            .dropdown_menu .dropdown_item-1 {
+                transform-origin: top center;
+                animation: rotateX 300ms 60ms ease-in-out forwards;
+            }
+
+            .dropdown_menu li {
+                background-color: var(--etc-dropdown-item-color);
+                display: inline-block;
+                text-align: center;
+                height: 35px;
+                border: 3px solid #373948;
+                border-top: none;
+            }
+
+            .dropdown_menu li a {
+                margin: 0;
+                padding: 0;
+                padding-top: 9px;
+                border-top: none;
+                border-bottom: none;
+            }
+
+            .dropdown_menu li p {
+                margin: 0;
+            }
+
+            .dropdown_menu li:hover {
+                background-color: var(--services-color);
+            }
+
+            .dropdown:hover .dropdown_menu li {
+                display: block
+            }
+
+            header nav ul li a.link-1 { background-color: var(--home-color) }
+            header nav ul li a.link-2 { background-color: var(--about-color); }
+            header nav ul li a.link-3 { background-color: var(--services-color); }
+            header nav ul li a.link-4 { background-color: var(--financial-color); }
+            header nav ul li a.link-5 { background-color: var(--forms-color); }
+            header nav ul li a.link-6 { background-color: var(--contact-color); }
+            header nav ul li a.link-7 { background-color: var(--etc-color); }
+
+            footer {
+                background: #272727;
+                padding-top: 1px;
+            }
+
+            .icon {
+                width: 100%;
+                height: auto;
+                margin: auto;
+            }
+
+            .icon ul {
+                margin: 0px;
+                padding: 0px;
+                text-align: center;
+            }
+
+            .icon ul li {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                margin: 0px 10px;
+                border-radius: 100%;
+                background: #7DCEA0;
+            }
+
+            .icon ul li a {
+                text-decoration: none;
+                color: #272727;
+                font-size: 25px;
+                display: block;
+            }
+
+            .icon ul li a i {
+                line-height: 50px;
+            }
+
+            .icon ul li:hover {
+                background: #e67e22;
+            }
+
+            .icon ul li a:hover > i {
+                transform: scale(1.6) rotate(25deg);
+            }
+
+            .nav {
+                width: 100%;
+                height: auto;
+                margin: auto;
+                margin-top: 5px;
+            }
+
+            .nav ul {
+                margin: 0px;
+                padding: 0px;
+                text-align: center;
+            }
+
+
+            .nav ul li {
+                display: inline-block;
+                margin: 10px 20px;
+            }
+
+            .nav ul li a {
+                text-decoration: none;
+                outline: none;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 20px;
+                color: #fff;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .nav ul li a:hover {
+                color: #e67e22;
+            }
+
+            .footer-end {
+                height: auto;
+                margin: auto;
+                padding: 10px;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .footer-end p {
+                color: #fff;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+
+            .footer-end a {
+                text-decoration: none;
+                color: #fff
+            }
+
+            .footer-end a:hover {
+                color: #e67e22;
+            }
+
+            @media(max-width:604px ) {
+                .nav ul li {
+                    padding: 0px;
+                }
+            }
+
+            @media(max-width:559px ) {
+
+                .nav1 ul li a, .nav ul li a {
+                    font-size: 13px;
+                }
+            }
+
+            @media(max-width:539px ) {
+                .nav ul li {
+                    margin: 5px 20px;
+                }
+
+                .nav ul li.p1 {
+                    padding-top: 10px;
+                }
+            }
+
+            @media(max-width:380px ) {
+                .nav ul li, .nav1 ul li {
+                    display: block;
+                    padding: 5px;
+                }
+
+                .icon ul li a i {
+                    line-height: 38px;
+                }
+
+                .icon ul li a {
+                    font-size: 20px;
+                }
+
+                .icon ul li {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            @media(max-width: 375px) {
+                .nav ul li.p1 {
+                    padding-top: 0px;
+                }
+            }
+
+            @media (max-device-width : 1024px) {
+                
+            }
+
+            @media (max-device-height: 768px) {
+                
+            }
+        </style>
+</head>
+
+<body>
+    <header>
+        <a href="/"><h1>Sharon Boris, LCSW, LLC</h1></a>
+        <nav role='navigation'>
+            <ul>
+                <li><a class="link-1 entypo-home active" href="/#home"></a></li>
+                <li><a class="link-2 entypo-user" href="/#about"></a></li>
+                <li><a class="link-3 entypo-lamp" href="/#services"></a></li>
+                <li><a class="link-4 entypo-vcard" href="/#financial"></a></li>
+                <li><a class="link-6 entypo-mail" href="/#contact"></a></li>
+                <li class="dropdown">
+                    <a class="link-7 entypo-dot-3"></a>
+                    <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
+                        <li class="dropdown_item-1"><a href="/resources"><p>Resources</p></a></li>
+                        <li class="dropdown_item-2"><a href="/eldercare"><p>Eldercare</p></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- <br>
+        <br>
+        <br>
+        <div>
+            <div onclick="parentNode.remove()"
+                style="/*! align-items: end; *//*! width: 12pt; *//* text-align: right; */cursor: pointer;/*! display: contents; *//*! transform: translate(1000px, 0px); *//*! display: flex; */font-size: 20pt;text-align: right;transform: translate(0px, -5px);@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');">
+                ✕
+            </div>
+            <h2>
+                ATTENTION: I will be out of the office from roughly December 26th through January 17th. If you'd like to
+                reach out, please plan to call on or after January 10th, 2022.
+            </h2>
+            <h2>
+                If you are an existing client, my colleague Ann Carlson, LCSW will be available for questions or brief
+                phone calls at <a href="tel:630-318-2805">630-318-2805</a>.
+                If this is a life-threatening emergency, please dial 911 or go to your nearest emergency room.
+            </h2>
+        </div> -->
+    </header>
+    <div class="content">
+        {{ content }}
+    </div>
+    <footer>
+        <nav class="nav" role='navigation'>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#financial">Insurance</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer-end">
+            <p>Designed by: <a href="https://blakeboris.com">Blake Boris</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

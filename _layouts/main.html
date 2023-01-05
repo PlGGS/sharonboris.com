@@ -347,32 +347,50 @@
 <body>
     <header>
         <script>
+            // The function actually applying the offset
+            function offsetAnchor() {
+                if (location.hash.length !== 0) {
+                    window.scrollTo(window.scrollX, window.scrollY - 70);
+                }
+            }
+
+            function moveToRef(that, e) {
+                if ($($(that).attr('href')).offset() === undefined)
+                    return false;
+
+                $('header nav a.active').removeClass('active');
+                $(that).addClass('active');
+
+                // Scroll to anchor
+                $('html,body').animate({ scrollTop: $($(that).attr('href')).offset().top - 70 }, 'slow');
+
+                e.preventDefault();
+                return false;
+            }
+
+            // Set the offset when entering page with hash present in the url
+            window.setTimeout(offsetAnchor, 0);
+
+
             $(document).ready(function () {
+                window.setTimeout(function() {
+                    moveToRef(this);
+                }, 0);
+
                 // On click, remove class on active element, add it to the new one
                 $('nav a').click(function (e) {
-
-                    $('header nav a.active').removeClass('active');
-                    $(this).addClass('active');
-
-                    // Scroll to anchor
-                    $('html,body').animate({ scrollTop: $($(this).attr('href')).offset().top - 70 }, 'slow');
-
-                    e.preventDefault();
-                    return false;
+                    moveToRef(this, e);
                 });
 
                 // On scroll, remove class on active element and add it to the new one
                 $(document).scroll(function () {
-
                     var position = Math.floor(($(this).scrollTop() + 70) / 800) + 1;
 
                     $('nav a.active').removeClass('active');
                     $('nav a.link-' + position).addClass('active');
-                    console.log(document.currentScript)
                 });
             });
         </script>
-
         <a href="/"><h1>Sharon Boris, LCSW, LLC</h1></a>
         <nav role='navigation'>
             <ul>
@@ -382,7 +400,7 @@
                 <li><a class="link-4 entypo-vcard" href="#financial"></a></li>
                 <li><a class="link-6 entypo-mail" href="#contact"></a></li>
                 <li class="dropdown">
-                    <a class="link-7 entypo-dot-3"></a>
+                    <a class="link-7 entypo-dot-3" onclick=null></a>
                     <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
                         <li class="dropdown_item-1"><a href="/resources"><p>Resources</p></a></li>
                         <li class="dropdown_item-2"><a href="/eldercare"><p>Eldercare</p></a></li>
