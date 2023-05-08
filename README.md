@@ -3,9 +3,9 @@
 My mom's website made with [Jekyll](https://jbuyndekyllrb.com/)
 
 ### How to build
-bundle exec jekyll serve
+`bundle exec jekyll serve`
 Or optionally to host over local network
-bundle exec jekyll serve --host=0.0.0.0
+`bundle exec jekyll serve --host=0.0.0.0`
 
 ### How it works
 the layout file containing the `<head>`, footer, and navbar is saved in `_layouts/`. All `.html` files starting with
