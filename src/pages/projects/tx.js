@@ -1,0 +1,29 @@
+import Project from '../../components/project';
+
+const TacticsX = () => (
+    <Project
+        name="TacticsX"
+        url="https://github.com/DePaul-University-TacticsX/TacticX"
+        desc="A 2.5D tactical turn-based brawler created in Unity."
+        pic0='/tx/tx1.jpg'
+        pic1='/tx/tx2.jpg'
+        pic2='/tx/tx3.jpg'
+        writeup={
+            <div>
+                <h3>Working in "2.5" Dimensions</h3>
+                <p>When I originally applied to DePaul University back in 2018, I was promised an in-depth, <i>in-person</i> senior capstone. When that didn't happen during my senior year in undergrad and my team took a hybrid approach to creating Scheduling Productivity Booster, I was a bit disappointed, but at least we got to meet in person every once in a while to really get things done collaboratively. So when I started my Master's and once again was unable to take a capstone in-person, I was extremely disappointed. That being said, our team did the best they could with what we were given this time around, and we actually implemented proper agile principles throughout the development process.</p>
+                <p>Once again, I pitched an overhaul of DePaul's coursework app at the time called Desire2Learn (D2L). After once again being turned down, I joined in on working on a Unity project titled TacticsX. Our project lead actually worked at a proper game studio working on titles in Unity daily, so I knew we were in for a smooth ride. That being said, not many of our other group members had much experience with Unity other than myself.</p>
+                <p>In the beginning, we had issues agreeing on where to organize our project plans. We eventually settled on Notion after a lot of back and forth. Most of our team wasn't familiar with it, so we also initially made a GitBooks page for our documentation. After a while, our apparent trial for GitBooks ran out, and we moved our documentation to Notion as well. Beyond documentation though, Notion actually provided a very nice UI for project planning similar to Trello, which we were thinking of using previously.</p>
+                <p>Development started off slowly, and we initially struggled with core design pillars of our game. We had a lot of ideas, but narrowing them down proved extremely difficult. It didn't help that one of our team members was brought over from his own tactical RPG game concept, which tended to clash with our team lead's ideas. Therefore, we spent the first sprint finalizing our design concepts, user stories, and major goals for the project and organizing them all in Notion.</p>
+                <p>Once our design concepts were more fleshed out, we quickly started working on the game itself. We implemented continuous deployment through Unity's Cloud Build Automation in conjunction with the main branch of our repo. Our team leader set up a test environment for us to begin development in, and we each got to work on our respective responsibilities for that sprint. I began by implementing the character selection UI. I based my implementation off of a template I found online. It helped me immensely, and I learned the best practices for making proper user interfaces in Unity at the time.</p>
+                <p>After fleshing out the character selection screen, I moved on to the in-game UI. Starting with the title screen, I based it on the first level of the game that we had so far which was a forest level. I mocked up a path leading into the woods, and got to work putting my newfound knowledge of UI creation to the test. Once I was happy with the font of the title, I decided to add a small bobbing effect to the background. To my surprise, subtle movement of the background really made the menu feel more professional.</p>
+                <p>Next, I began implementing the in-game UI for your character's actions. The game is separated into two modes of play. The gameplay transitions between strategic turn-based combat and a realtime battle arena, with additional minigames for added variety. When you or an enemy make contact with a turn-based attack, you're transported into a realtime combat environment with the enemy and any other enemies on adjacent tiles within the turn-based map. I started with the turn-based UI by placing a canvas above the player in 3D space and facing it directly towards the virtual camera. By matching the angle of the camera, the UI appears static until the player moves their character. It made for a very cool effect!</p>
+                <p>Finally, throughout all of the aforementioned development, I was following an artist on itch.io named <a href="https://luizmelo.itch.io/">Luis Melo</a> on itch.io. We purchased many assets from his library, as none of us had experience with character design, pixel art, or animation. I went through every sprite and made sure they were all sized and centered properly before passing them off to the character programmer on our team.</p>
+                <p>When all was said and done for the class, it was clear we weren't able to hit all of our original goals for the game, but we were all still very happy with what we had completed up until that point! Nearly everyone in the group was familiar with Git, so merge conflicts and other development issues weren't nearly as much of a headache as they have been in other collaborative programming courses I've taken in the past. We completed the first level with character dialogue, movement, minigames, and more! The UI has a clear and concise flow towards character and level selection. We even worked together to synchronize the names you give your characters into the in-game turn-based combat map. When it was all said and done, we couldn't wait to present our game to the class during finals week.</p>
+
+            </div>
+        }
+    />
+);
+
+export default TacticsX;

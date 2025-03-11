@@ -1,0 +1,30 @@
+import Project from '../../components/project';
+
+const Bell = () => (
+    <Project
+        name="Bell"
+        url="https://github.com/PlGGS/bell"
+        desc="An iOS application written in SwiftUI for tracking CTA L train cars in near real-time."
+        pic0='/bell/bell0.jpg'
+        pic1='/bell/bell2.jpg'
+        pic2='/bell/bell3.jpg'
+        writeup={
+            <div>
+                <h3>Train Tracking</h3>
+                <p>This project was the culmination of everything I learned throughout two iOS courses at DePaul University. I actually pitched this idea for my final project early on in the first course, eventually pivoting to creating a music playing app. But the second time around, I focused almost all of my work throughout the course on building up features for what would become Bell.</p>
+                <p>Early on in the second course, we were tasked with interfacing with an API of some sort, so I chose the CTA's <a href="https://www.transitchicago.com/developers/traintracker/">train tracker API</a>. I started by creating a Train class implementing Codable for decoding and encoding train info from the API. I defined a CodingKeys enum to map between the shorthand used in the API and my own more comprehensive naming scheme. This allowed me to decode additional incoming information for a station and process train information based on a list of incoming train details towards a user-specified station.</p>
+                <p>The api relies on estimated arrival times, because CTA trains still haven't received GPS trackers. The API allows developers to take a train's last known location based on detectors on the rails and estimate its “real-time” position however you like. It also provides a predicted arrival time to the user-specified station for each train. This allows developers including myself to perform any sort of additional mathematics necessary to provide the most accurate positions and estimated arrival times for users.</p>
+                <p>The second course also introduced SwiftUI. Our professor did this to ensure we had a very strong foundation in XCode and the core Swift language. He often referred to SwiftUI as a “language hack” rather than a framework or library, which is fair considering its rough launch and heavily simplified declarative paradigm in comparison to vanilla Swift code. Instead of updating variables before passing them as parameters to UI element constructors and builder functions, you bind properties to UI elements through bindings. Bindings are denoted through property wrappers such as @state, allowing for more universal, data-driven UI updates.</p>
+                <p>Starting with the third homework assignment in the second course, I used SwiftUI to simplify the UI creation process. The framework automatically centers UI elements by default, allowing you to easily stack them both horizontally and vertically while maintaining a core symmetry which would otherwise be timely to achieve in core Swift. For the assignment itself, SwiftUI allowed me to compartmentalize each step of my application into its own page. The user first selects a train line such as the red line and then a stop. They are then provided with a list of incoming trains towards their selected stop.</p>
+                <p>Even though the end result was arguably less aesthetically pleasing than my first assignment, rewriting the app proved to me just how much more could be done with so much less code in SwiftUI. Homework 4 was a bit more restrictive in terms of what we were required to implement, but it also proved immensely useful for what would become Bell, because we were required to implement proper user permissions handling for locations services alongside others. This would also be necessary for Bell, as the user must provide permission for the app to use their precise location. Handling the different cases for this permission has also been simplified immensely compared to vanilla Swift.</p>
+                <h3>One Final Effort</h3>
+                <p>At last, I combined all my previous work from assignments 2, 3, and 4, to create my final project in the course, Bell. Initially, I wasn't actually sure if I wanted to stick with SwiftUI for Bell, because by default, a sheet view grays out the content above it, and I wanted the user to be able to pull the map up or down as they please. Outside of SwiftUI, the same component has options for allowing input outside of the sheet, but I ended up pushing through and creating my own custom sheet view. This proved difficult and very finicky, but it worked!</p>
+                <p>Once I had a view that the user could pull up or down within the app, I created a map view model within it and added lines between each L stop on the map in their respective colors. I quickly moved on from working on the map and implemented more elements from previous assignments such as the list of terminals, a search bar, and location permissions. After that, it was time to get to work on entirely new features such as map region manipulation, drawing specific lines on the map, and a proper settings screen for selecting how far the region should be around the user to look for L stops. I also allowed the user to choose whether or not the search bar only showed stops within that radius or all L stops.</p>
+                <p>Finally, I added a bit of movement for the train icons themselves on the map. I based the speed on the estimated time of arrival provided by the <a href="https://www.transitchicago.com/developers/traintracker/">train tracker API</a>, and gave each of them a vector based on the latitude and longitude of the next stop for each train. After some other minor improvements, I was out of time. Even though I had started on this project months in advance and even used other assignments as ways of speeding up development, I ended up cramming towards the end. But overall, I'm happy with how the app turned out, and I hope to revisit it soon and squash the last couple remaining bugs.</p>
+
+            </div>
+        }
+    />
+);
+
+export default Bell;
