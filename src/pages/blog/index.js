@@ -14,7 +14,7 @@ function Index(props) {
               return (
                 <li key={blog.id}>
                   <Link href={`/blog/${blog.slug}`}>
-                    <a>{blog.title} · {blog.date}</a>
+                    {blog.title} · {blog.date}
                   </Link>
                 </li>
               );
