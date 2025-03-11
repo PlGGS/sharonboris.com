@@ -1,25 +1,13 @@
 # https://sharonboris.com
 ## By: Blake Boris
-My mom's website made with [Jekyll](https://jekyllrb.com/)
+My mom's website made with [PHP](https://www.php.net/) and [Docker](https://www.docker.com/)
 
 ### How to build
-- `bundle install`
-- `bundle exec jekyll serve`
-Or optionally to host over local network
-- `bundle exec jekyll serve --host=0.0.0.0`
-
-### How it works
-the layout file containing the `<head>`, footer, and navbar is saved in `_layouts/`. All `.html` files starting with
-```
----
-layout: default
-title: Title
-css: [css, file, names, from, /css/, without, .scss]
-js: [js, file, names, from, /script/, without, .js]
----
-```
-will be wrapped in it.<br>
-*Note: variables can be left blank when not used*
-
-> Be careful what file encoding you use. `UTF-8 with BOM` / `UTF 8 with signature` will NOT work. 
-> I would suggest using `UTF-8` / `UTF-8 without signature`.
+- Install [Docker](https://www.docker.com/)
+- Install [Composer](https://getcomposer.org/)
+- Install [Docker Compose](https://docs.docker.com/compose/)
+- From the root of the repository, run the following:
+- `composer install` to install PHP dependencies
+- `docker build -t sharonboris .` to create the image
+- `docker-compose build` to build
+- `docker-compose up -d`
