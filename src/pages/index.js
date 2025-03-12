@@ -5,7 +5,7 @@ const moveDuration = 2;
 
 const Index = () => (
     <Layout>
-        <div id="text">
+        <div id="intro-body">
             <div id="mid">
                 <div id="intro">
                     <motion.div
@@ -44,7 +44,7 @@ const Index = () => (
                             delay: 0.125,
                         }}
                     >
-                        <h4>LCSW, LLC</h4>
+                        <h4>Licensed Clinical Social Worker</h4>
                     </motion.div>
                 </div>
                 <div id="pic">
@@ -69,22 +69,65 @@ const Index = () => (
                 </div>
             </div>
         </div>
-            <div id="background"/>
+        <div>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+        </div>
         <style jsx>{`
-            #text {
+            #intro-body {
+                height: 100vh;
                 padding-left: 10%;
                 padding-right: 10%;
                 overflow: hidden;
+                background: url('/trees.webp') center top / cover no-repeat;
+                color: white;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
             }
-            #text table {
+            #intro-body table {
                 position: relative;
                 margin: 0 auto;
             }
-            #text img {
+            #intro-body img {
                 width: 400px;
                 border-radius: 50%;
+                box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.4);
             }
-            #text {
+            #intro-body {
                 padding: 20px;
                 padding-bottom: 150px;
             }
@@ -96,6 +139,10 @@ const Index = () => (
             }
 
             #intro {
+                h1 {
+                    text-color: white;
+                }
+
                 padding: 2%;
                 /* transform: translate(0px, 150px); */
             }
@@ -104,35 +151,35 @@ const Index = () => (
             }
 
             #background {
-                position: fixed;
-                top: 77px;
+                position: relative;
+                top: 0;
                 left: 0;
                 width: 100vw;
                 height: 100vh;
-                background-image: url('/trees.webp');
+                
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
-                z-index: -1;
+                z-index: -100;
             }
 
             /* @media (max-device-width: 1080px) {
-                #text table ttext tr td img {
+                #intro-body table tintro-body tr td img {
                     width: 100%;
                     border-radius: 50%;
                 }
-                #text table {
+                #intro-body table {
                     padding-left: 10%;
                     padding-right: 10%;
                 }
             } */
 
             @media (max-device-width: 1080px) {
-                #text {
+                #intro-body {
                     display: flex;
                     flex-flow: column;
                 }
-                #text img {
+                #intro-body img {
                     border-radius: 50%;
                 }
 
@@ -155,8 +202,6 @@ const Index = () => (
                     padding: 0px;
                     order: 2;
                     transform: translate(0px, calc(-50vh));
-
-                    text-align: center;
                 }
                 #intro h4 {
                     padding-top: 10px;

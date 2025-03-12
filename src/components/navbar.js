@@ -25,7 +25,7 @@ const Navbar = (props) => (
                             whileHover={{ scale: 1.05 }}
                         >
                             <Link href="/">
-                                <b>Sharon Boris</b>
+                                <b>Sharon Boris, LCSW, LLC</b>
                             </Link>
                         </motion.div>
                     </li>
@@ -98,65 +98,38 @@ const Navbar = (props) => (
                 </li>
             </ul>
         </div>
-        <div id="resources">
-            <div id="sites">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <motion.div whileHover={{ scale: 1.1 }}>
-                                    <a href="https://www.github.com/plggs/">
-                                        <i id="icon">
-                                            <FontAwesomeIcon icon={faGithub} />
-                                        </i>
-                                    </a>
-                                </motion.div>
-                            </td>
-                            <td>
-                                <motion.div whileHover={{ scale: 1.1 }}>
-                                    <a href="https://www.linkedin.com/in/blakeboris/">
-                                        <i id="icon">
-                                            <FontAwesomeIcon
-                                                icon={faLinkedin}
-                                            />
-                                        </i>
-                                    </a>
-                                </motion.div>
-                            </td>
-                            <td>
-                                <motion.div whileHover={{ scale: 1.1 }}>
-                                    <a href="https://www.instagram.com/blakebor.is/">
-                                        <i id="icon">
-                                            <FontAwesomeIcon
-                                                icon={faInstagram}
-                                            />
-                                        </i>
-                                    </a>
-                                </motion.div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
         {props.children}
         <style jsx>{`
             #bar {
                 padding: 20px;
                 padding-bottom: 5px;
-                background: #fff;
-                background-image: linear-gradient(to bottom, #fff, #5587c9);
+                background: transparent;
                 list-style: none;
                 display: flex;
-                transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
                 position: absolute;
                 width: 100%;
+                color: white;
+                transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+                border-bottom: none;
+                border-bottom-color: currentcolor;
+                background: transparent;
+                background-color: transparent;
+                background-image: none;
             }
             #bar:hover {
                 padding-bottom: 50px; /* Adjust padding for smoother expansion */
             }
+            @font-face {
+                font-family: "Cream-Peach";
+                src: url("/fonts/Cream-Peach.ttf") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            #home {
+                font-family: "Cream-Peach", sans-serif;
+            }
             #pages {
-                margin: 0 auto;
+                margin-left: auto;
             }
             #button {
                 display: none;
@@ -169,10 +142,8 @@ const Navbar = (props) => (
                 padding-right: 10px;
                 width: 42px;
                 margin: 0 auto;
-                color: #333;
             }
             #sites table tr td a {
-                color: #333;
             }
             #menu {
                 display: none;
@@ -235,7 +206,8 @@ function Link({ children, href, under }) {
                 : "none"
             : "none",
         fontSize: "24px",
-        color: "#333",
+        color: "white",
+        textShadow: "2px 2px 5px rgba(0, 0, 0, 0.25)"
     };
 
     const handleClick = (e) => {
