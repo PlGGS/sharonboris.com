@@ -5,7 +5,7 @@ const moveDuration = 2;
 
 const Index = () => (
     <Layout>
-        <div id="body">
+        <div id="text">
             <div id="mid">
                 <div id="intro">
                     <motion.div
@@ -64,26 +64,27 @@ const Index = () => (
                             delay: 0.1,
                         }}
                     >
-                        <img src="/sharon.webp" alt="blake" align="right"></img>
+                        <img src="/sharon.webp" alt="sharon" align="right"></img>
                     </motion.div>
                 </div>
             </div>
         </div>
+            <div id="background"/>
         <style jsx>{`
-            #body {
+            #text {
                 padding-left: 10%;
                 padding-right: 10%;
                 overflow: hidden;
             }
-            #body table {
+            #text table {
                 position: relative;
                 margin: 0 auto;
             }
-            #body img {
+            #text img {
                 width: 400px;
                 border-radius: 50%;
             }
-            #body {
+            #text {
                 padding: 20px;
                 padding-bottom: 150px;
             }
@@ -102,23 +103,36 @@ const Index = () => (
                 padding: 2%;
             }
 
+            #background {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-image: url('/trees.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index: -1;
+            }
+
             /* @media (max-device-width: 1080px) {
-                #body table tbody tr td img {
+                #text table ttext tr td img {
                     width: 100%;
                     border-radius: 50%;
                 }
-                #body table {
+                #text table {
                     padding-left: 10%;
                     padding-right: 10%;
                 }
             } */
 
             @media (max-device-width: 1080px) {
-                #body {
+                #text {
                     display: flex;
                     flex-flow: column;
                 }
-                #body img {
+                #text img {
                     border-radius: 50%;
                 }
 
@@ -140,7 +154,7 @@ const Index = () => (
                 #intro {
                     padding: 0px;
                     order: 2;
-                    transform: translate(0px, calc(-40vh));
+                    transform: translate(0px, calc(-50vh));
 
                     text-align: center;
                 }
