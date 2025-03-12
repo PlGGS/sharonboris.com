@@ -145,8 +145,15 @@ const Navbar = (props) => (
                 padding: 20px;
                 padding-bottom: 5px;
                 background: #fff;
+                background-image: linear-gradient(to bottom, #fff, #5587c9);
                 list-style: none;
                 display: flex;
+                transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+                position: absolute;
+                width: 100%;
+            }
+            #bar:hover {
+                padding-bottom: 50px; /* Adjust padding for smoother expansion */
             }
             #pages {
                 margin: 0 auto;
