@@ -5,7 +5,7 @@ const moveDuration = 2;
 
 const Index = () => (
     <Layout>
-        <div id="intro-body">
+        <section id="intro-body">
             <div id="mid">
                 <div id="intro">
                     <motion.div
@@ -68,46 +68,17 @@ const Index = () => (
                     </motion.div>
                 </div>
             </div>
-        </div>
-        <div>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-            <h1>content</h1>
-        </div>
+        </section>
+        <section id="welcome" className="container">
+            <h1>welcome</h1>
+            <h1>welcome</h1>
+            <h1>welcome</h1>
+            <h1>welcome</h1>
+            <h1>welcome</h1>
+        </section>
+        <section id="services" className="container">
+            <h1>services</h1>
+        </section>
         <style jsx>{`
             #intro-body {
                 height: 100vh;
@@ -117,6 +88,16 @@ const Index = () => (
                 background: url('/trees.webp') center top / cover no-repeat;
                 color: white;
                 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            }
+            #intro-body::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 10%;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0), white);
+                pointer-events: none;
             }
             #intro-body table {
                 position: relative;
@@ -163,6 +144,16 @@ const Index = () => (
                 z-index: -100;
             }
 
+            .container{
+                margin: auto auto 100px auto;
+                text-align: center;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows:200px 400px;
+                grid-gap:10px;
+                grid-auto-flow: dense;
+            }
+
             /* @media (max-device-width: 1080px) {
                 #intro-body table tintro-body tr td img {
                     width: 100%;
@@ -193,7 +184,7 @@ const Index = () => (
                 #pic {
                     padding: 0px;
                     order: 1;
-                    transform: translate(0px, calc(-10vh));
+                    transform: translate(0px, calc(-5vh));
                 }
                 #pic img {
                     width: 314px;
@@ -201,7 +192,7 @@ const Index = () => (
                 #intro {
                     padding: 0px;
                     order: 2;
-                    transform: translate(0px, calc(-50vh));
+                    transform: translate(0px, calc(-52vh));
                 }
                 #intro h4 {
                     padding-top: 10px;
