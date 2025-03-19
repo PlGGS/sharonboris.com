@@ -102,7 +102,7 @@ const Portfolio = () => (
         <style>{`
             #intro {
                 width: 60%;
-                margin: 2% 20% 2% 20%;
+                padding: 10% 20% 2% 20%;
             }
 
             #intro p {

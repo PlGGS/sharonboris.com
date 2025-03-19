@@ -49,7 +49,7 @@ const Gallery = () => (
         <style>{`
             #intro {
                 width: 60%;
-                margin: 2% 20% 2% 20%;
+                padding: 2% 20% 2% 20%;
             }
 
             #intro p {
