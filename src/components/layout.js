@@ -4,7 +4,7 @@ import Navbar from "./navbar";
 const Layout = (props) => (
     <>
         <Head>
-            <title>Blake Boris</title>
+            <title>Sharon Boris, LCSW, LLC</title>
             <link rel="favicon" href="/favicon.ico" />
         </Head>
         <Navbar />
