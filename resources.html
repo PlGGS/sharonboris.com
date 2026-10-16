@@ -1,63 +1,71 @@
 ---
 layout: secondary
-title: Sharon Boris, LCSW, LLC
+title: Forms & Resources | Sharon Boris, LCSW, LLC
 css: resources
 ---
 
 <!-- handouts, books, websites, apps -->
 
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
-</head>
-<div>
-    <div id="script-blocker"></div>
-</div>
-<section id="home">
-    <div class="scaleable-wrapper" id="scaleable-wrapper">
+<section class="page-banner">
+    <div class="container">
         <h1>Resources</h1>
     </div>
 </section>
-<section id="forms">
+<section id="forms" class="forms">
     <script>
         /*
-         * Creates url bubbles for each file located at https://api.github.com/repos/plggs/sharonboris.com/contents/files/ + dir
+         * Creates download cards for each file located at https://api.github.com/repos/plggs/sharonboris.com/contents/files/ + dir
          * @param string dir The directory name to pull file names from
          */
         function getFileBubbles(dir) {
-            $.ajax({
-                type: 'GET',
-                crossDomain: true,
-                dataType: 'json',
-                url: 'https://api.github.com/repos/plggs/sharonboris.com/contents/files/' + dir,
-                success: function (data) {
+            fetch('https://api.github.com/repos/plggs/sharonboris.com/contents/files/' + dir)
+                .then(function (response) { return response.json(); })
+                .then(function (data) {
                     let containerForms = [];
 
                     //add files in reverse order as of mom's request
                     for (let file of data) {
-                        containerForms.unshift(`<div><a href="${file.path}" target="_blank" rel="noopener noreferrer"><div class="label"><h1>${file.name}</h1></div></a></div>`);
+                        let name = file.name.replace(/\.pdf$/i, '').trim();
+                        containerForms.unshift(
+                            `<a class="file-card" href="/${file.path}" target="_blank" rel="noopener noreferrer">` +
+                                '<span class="file-icon"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></span>' +
+                                `<span class="file-name">${name}</span>` +
+                                '<i class="fa-solid fa-arrow-down file-arrow" aria-hidden="true"></i>' +
+                            '</a>'
+                        );
                     }
-                    containerForms.unshift('<div class="container">');
-                    containerForms.push('</div>');
 
-                    $("#" + dir).html(containerForms.join(''));
-                }
-            })
+                    // insert before any static links already in the grid (e.g. Florida Telehealth Resources)
+                    document.getElementById(dir).insertAdjacentHTML('afterbegin', containerForms.join(''));
+                });
         }
     </script>
-    <div class="inner">
-        <h3>New Clients</h3>
-        <script>
-            getFileBubbles('new-patient');
-        </script>
-        <span id="new-patient">
-        </span>
-        <h3>Telehealth</h3>
-        <script>
-            getFileBubbles('telehealth');
-        </script>
-        <span id="telehealth">
-        </span>
-        <a href="https://flhealthsource.gov/telehealth/" target="_blank" rel="noopener noreferrer"><div class="label"><h1>Florida Telehealth Resources</h1></div></a>
+    <div class="container">
+        <div class="form-group">
+            <div class="form-group-head">
+                <span class="form-group-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></span>
+                <h2>New Clients</h2>
+            </div>
+            <div class="file-grid" id="new-patient"></div>
+            <script>
+                getFileBubbles('new-patient');
+            </script>
+        </div>
+        <div class="form-group">
+            <div class="form-group-head">
+                <span class="form-group-icon"><i class="fa-solid fa-laptop-medical" aria-hidden="true"></i></span>
+                <h2>Telehealth</h2>
+            </div>
+            <div class="file-grid" id="telehealth">
+                <a class="file-card file-card-link" href="https://flhealthsource.gov/telehealth/" target="_blank" rel="noopener noreferrer">
+                    <span class="file-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></span>
+                    <span class="file-name">Florida Telehealth Resources</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square file-arrow" aria-hidden="true"></i>
+                </a>
+            </div>
+            <script>
+                getFileBubbles('telehealth');
+            </script>
+        </div>
     </div>
 </section>

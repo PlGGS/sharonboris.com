@@ -1,0 +1,21 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="Sharon Boris, LCSW, LLC. Counseling for adults and seniors.">
+    <meta name="theme-color" content="#2c2e3a">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+    <link rel="stylesheet" type="text/css" href="/css/site.css?{{ site.time | date: '%s' }}">
+    {% for item in page.css %}
+    <link rel="stylesheet" type="text/css" href="/css/{{ item }}.css?{{ site.time | date: '%s' }}">
+    {% endfor %}
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="/script/site.js?{{ site.time | date: '%s' }}" defer></script>
+    {% for item in page.js %}
+    <script src="/script/{{ item }}.js" defer></script>
+    {% endfor %}
+</head>
